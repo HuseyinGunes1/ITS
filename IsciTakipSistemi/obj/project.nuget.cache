@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "6ODTxl5zrDUuw41dvp7aHWdWXwAb8Yq1lzZ0oUvKt6f8uqjHP1as0OX3rQO11HWwElg9uy6s2ugo0xkGoLjdkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\IsciTakipSistemi\\IsciTakipSistemi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hüseyin\\.nuget\\packages\\fluentvalidation\\10.0.2\\fluentvalidation.10.0.2.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.2\\fluentvalidation.aspnetcore.10.0.2.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.2\\fluentvalidation.dependencyinjectionextensions.10.0.2.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

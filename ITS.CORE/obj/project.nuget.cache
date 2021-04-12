@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "i5eOdTo/FdomByQKVNeir+Z5NlXjlwUrDvyHNBs+cFZ4HTtbO80rqJ3cBJqkSS5YGBbO806i196gA96y68TEmA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.CORE\\ITS.CORE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

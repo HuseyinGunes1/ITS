@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JCbnlMK+VnaCKEzFLDCqOSZgVXQ9ESeFIp63n9gx8ebB4Kc6M0PVAJSWy4GL2BkcsqYDbNzUn2Ls54pbonGPGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.SERVİCE\\ITS.SERVİCE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\hüseyin\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
