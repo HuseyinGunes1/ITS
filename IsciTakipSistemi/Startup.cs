@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +26,11 @@ namespace IsciTakipSistemi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //FluentValidation Serrvisini AddFluetValidation ile uygulamaya entegre edecez
+            //Entitlere gelen validationlarýn nerde tututulduðunu sisteme bildirmemiz lazým 
+            //RegisterValidatorsFromAssemblyContaining içinde tanýmladýðýmýz sýnýf neyse o sýnýfýn içinde bulunduðu 
+            //Asembly bulup o asembly içerisindeki tüm validater larý bulup sisteme entegre edicek
+            services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
