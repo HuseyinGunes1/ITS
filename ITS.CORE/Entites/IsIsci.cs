@@ -11,6 +11,6 @@ namespace ITS.CORE.Entites
         public bool? Durumu { get; set; }
 
         public virtual Is Is { get; set; }
-        public virtual Isci Isci { get; set; 
+        public virtual Isci Isci { get; set;} 
     }
 }
