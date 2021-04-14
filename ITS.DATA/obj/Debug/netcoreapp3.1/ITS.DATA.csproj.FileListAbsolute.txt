@@ -2,3 +2,14 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.csprojAssemblyReference.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.AssemblyInfoInputs.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.AssemblyInfo.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.DATA.deps.json
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.DATA.runtimeconfig.json
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.DATA.runtimeconfig.dev.json
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.DATA.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.DATA.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.CORE.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.csproj.CoreCompileInputs.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.csproj.CopyComplete
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.genruntimeconfig.cache

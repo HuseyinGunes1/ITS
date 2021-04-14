@@ -1,0 +1,9 @@
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.SERVİCE.deps.json
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.SERVİCE.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.SERVİCE.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.csprojAssemblyReference.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.AssemblyInfoInputs.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.AssemblyInfo.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.csproj.CoreCompileInputs.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.pdb

@@ -12,9 +12,6 @@ namespace ITS.DATA.Configuration
         public void Configure(EntityTypeBuilder<IsIsci> builder)
         {
            builder.HasKey(e => new { e.IsciId, e.IsId });
-
-            builder.ToTable("IsIsci");
-
             builder.HasOne(d => d.Is)
                 .WithMany(p => p.IsIsci)
                 .HasForeignKey(d => d.IsId)

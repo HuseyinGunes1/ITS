@@ -1,8 +1,12 @@
 using FluentValidation.AspNetCore;
+using ITS.CORE.Entites;
+using ITS.DATA.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,21 +20,31 @@ namespace IsciTakipSistemi
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+
+       
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
             //FluentValidation Serrvisini AddFluetValidation ile uygulamaya entegre edecez
             //Entitlere gelen validationlarýn nerde tututulduðunu sisteme bildirmemiz lazým 
             //RegisterValidatorsFromAssemblyContaining içinde tanýmladýðýmýz sýnýf neyse o sýnýfýn içinde bulunduðu 
             //Asembly bulup o asembly içerisindeki tüm validater larý bulup sisteme entegre edicek
             services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            services.AddDbContext<ApplicationDbContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration["ConnectionStrings:DefaultConnectionString"]);
+            });
+            services.AddIdentity<Cavus, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -22,10 +22,13 @@ namespace ITS.DATA.Context
         public DbSet<Isci> Isci { get; set; }
         public DbSet<IsIsci> IsIsci { get; set; }
         public DbSet<Isveren> Isveren { get; set; }
+        public DbSet<KullaniciRefreshToken> KullaniciRefreshToken { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
             base.OnModelCreating(builder);
+
         }
 
 
