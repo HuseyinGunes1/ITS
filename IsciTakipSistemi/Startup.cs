@@ -42,7 +42,17 @@ namespace IsciTakipSistemi
             {
                 opt.UseSqlServer(Configuration["ConnectionStrings:DefaultConnectionString"]);
             });
-            services.AddIdentity<Cavus, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<Cavus, IdentityRole>(opt=> {
+
+                opt.Password.RequiredLength = 4;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireDigit = false;
+
+            
+            }
+                ).AddEntityFrameworkStores<ApplicationDbContext>();
 
 
         }
