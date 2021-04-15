@@ -8,7 +8,6 @@ namespace ITS.CORE.Token
     {
         public string AccesToken { get; set; }
         public DateTime AccesTokenLifeTime { get; set; }
-
         public string RefreshToken { get; set; }
         public DateTime RefreshTokenLifeTime { get; set; }
     }
