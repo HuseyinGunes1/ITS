@@ -10,6 +10,7 @@ namespace ITS.DATA.Context
 {
    public class ApplicationDbContext:IdentityDbContext<Cavus,IdentityRole,string>
     {
+       
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
                 
