@@ -10,9 +10,9 @@ namespace ITS.CORE.Repository
    public interface IGenericRepository<TEntity> where TEntity:class
     {
         Task AddAsync(TEntity entity);
-        void Remove(int id);
-        Task<IQueryable<TEntity>> GetAllAsync();
-        Task<IQueryable<TEntity>> GetAllByIdAsync(int id);
+        void Remove(TEntity entity);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<TEntity> GetAllByIdAsync(int id);
 
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
 
