@@ -289,6 +289,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
+      },
+      "ITS.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ITS.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ITS.Shared.dll": {}
+        }
       }
     }
   },
@@ -804,10 +814,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ITS.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/ITS.Shared.csproj",
+      "msbuildProject": "../Shared/ITS.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ITS.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.4"
     ]
   },
@@ -846,7 +862,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\Shared\\ITS.Shared.csproj": {
+              "projectPath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\Shared\\ITS.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

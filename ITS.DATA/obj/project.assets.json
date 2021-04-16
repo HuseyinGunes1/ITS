@@ -1385,6 +1385,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "ITS.Shared": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4"
         },
         "compile": {
@@ -1392,6 +1393,16 @@
         },
         "runtime": {
           "bin/placeholder/ITS.CORE.dll": {}
+        }
+      },
+      "ITS.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ITS.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ITS.Shared.dll": {}
         }
       }
     }
@@ -5207,6 +5218,11 @@
       "type": "project",
       "path": "../ITS.CORE/ITS.CORE.csproj",
       "msbuildProject": "../ITS.CORE/ITS.CORE.csproj"
+    },
+    "ITS.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/ITS.Shared.csproj",
+      "msbuildProject": "../Shared/ITS.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

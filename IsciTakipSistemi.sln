@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITS.CORE", "ITS.CORE\ITS.CO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITS.SERVİCE", "ITS.SERVİCE\ITS.SERVİCE.csproj", "{A41A8189-5438-46F3-9255-9A35FF0DBDBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{BC5253B8-3F7D-4798-8193-569FAB0C9D2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Shared", "Shared\ITS.Shared.csproj", "{BC5253B8-3F7D-4798-8193-569FAB0C9D2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

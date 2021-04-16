@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ITS.CORE.Token
+namespace ITS.CORE.Dto
 {
-   public class Token
+   public class TokenEntity
     {
         public string AccesToken { get; set; }
         public DateTime AccesTokenLifeTime { get; set; }
