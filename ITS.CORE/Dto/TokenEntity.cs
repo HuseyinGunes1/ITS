@@ -6,7 +6,7 @@ namespace ITS.CORE.Dto
 {
    public class TokenEntity
     {
-        public string AccesToken { get; set; }
+        public string AccessToken { get; set; }
         public DateTime AccesTokenLifeTime { get; set; }
         public string RefreshToken { get; set; }
         public DateTime RefreshTokenLifeTime { get; set; }
