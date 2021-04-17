@@ -1,6 +1,7 @@
 using FluentValidation.AspNetCore;
 using ITS.CORE.Entites;
 using ITS.DATA.Context;
+using ITS.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -54,7 +55,7 @@ namespace IsciTakipSistemi
             }
                 ).AddEntityFrameworkStores<ApplicationDbContext>();
 
-
+            services.Configure<CustomTokenOptions>(Configuration.GetSection("TokenAyar"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
