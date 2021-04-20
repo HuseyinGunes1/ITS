@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Repository;
+using ITS.DATA.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace ITS.DATA.Implementasyon
     {
         private readonly DbContext _dbContext;
         private readonly DbSet<TEntity> _dbset;
-        public GenericRepository(DbContext dbContext)
+        public GenericRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
             _dbset = dbContext.Set<TEntity>();

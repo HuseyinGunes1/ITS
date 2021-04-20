@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.UnitOfWork;
+using ITS.DATA.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ITS.DATA.Implementasyon
 {
-    public class UnitOfWork : IUnirOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly DbContext _dbContext;
      
-        public UnitOfWork(DbContext dbContext)
+        public UnitOfWork(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
           

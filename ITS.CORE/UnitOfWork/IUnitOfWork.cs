@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ITS.CORE.UnitOfWork
 {
-   public interface IUnirOfWork
+   public interface IUnitOfWork
     {
         Task CommitAsync();
         void Commit();
