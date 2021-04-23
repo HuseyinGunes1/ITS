@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ITS.CORE.Dto
 {
-   public class TokenEntity
+   public class TokenDto
     {
         public string AccessToken { get; set; }
         public DateTime AccesTokenLifeTime { get; set; }

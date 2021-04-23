@@ -13,3 +13,5 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.pdb
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\obj\Debug\netcoreapp3.1\ITS.DATA.genruntimeconfig.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.Shared.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.DATA\bin\Debug\netcoreapp3.1\ITS.Shared.pdb

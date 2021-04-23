@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
@@ -20,6 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ITS.DATA\ITS.DATA.csproj" />
+    <ProjectReference Include="..\ITS.SERVİCE\ITS.SERVİCE.csproj" />
+    <ProjectReference Include="..\Shared\ITS.Shared.csproj" />
   </ItemGroup>
 
 

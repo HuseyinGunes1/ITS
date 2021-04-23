@@ -51,7 +51,7 @@ namespace ITS.SERVİCE.Service
             return userList;
         }
 
-        public TokenEntity CreateToken(Cavus cavus)
+        public TokenDto CreateToken(Cavus cavus)
         {
             var AccesTokenOmru = DateTime.Now.AddMinutes(_customTokenOptions.AccesTokenO);//Token ömrünü al
             var RefreshTokenOmru = DateTime.Now.AddMinutes(_customTokenOptions.RefreshTokenO);//Refresh token ömrünü al
@@ -68,7 +68,7 @@ namespace ITS.SERVİCE.Service
             var handler = new JwtSecurityTokenHandler();
             var token = handler.WriteToken(jwtSecurityToken);
 
-            var tokenDto = new TokenEntity
+            var tokenDto = new TokenDto
             {
                 AccessToken = token,
                 RefreshToken = CreateRefreshToken(),

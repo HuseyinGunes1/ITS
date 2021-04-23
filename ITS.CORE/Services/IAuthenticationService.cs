@@ -9,9 +9,9 @@ namespace ITS.CORE.Services
 {
    public interface IAuthenticationService  //kullanıcıdan gerekli bilgileri alacağımız ve bu bilgiler doğrultusunda geriye token döneceğimiz servistir
     {
-        Task<Response<TokenEntity>> CreateAccesTokenAsync(LoginDto loginDto);
-        Task<Response<TokenEntity>> CreateByRefreshTokenAsync(string refreshToken);//kullanıcı refresh token alması için servis
+        Task<Response<TokenDto>> CreateAccesTokenAsync(LoginDto loginDto);
+        Task<Response<TokenDto>> CreateByRefreshTokenAsync(string rrefreshToken);//kullanıcı refresh token alması için servis
 
-        Task<Response<NoDataDto>> RevokeRefreshTokenAsync(string refreshToken);// kullanıcı log out olduğu zaman kullanıcı için refreh token varsa bunu null a set et
+        Task<Response<NoDataDto>> RevokeRefreshTokenAsync(string rrefreshToken);// kullanıcı log out olduğu zaman kullanıcı için refreh token varsa bunu null a set et
     }
 }

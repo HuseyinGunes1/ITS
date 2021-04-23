@@ -1,0 +1,9 @@
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.csprojAssemblyReference.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.AssemblyInfoInputs.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.AssemblyInfo.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.csproj.CoreCompileInputs.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\bin\Debug\netcoreapp3.1\ITS.Shared.deps.json
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\bin\Debug\netcoreapp3.1\ITS.Shared.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\bin\Debug\netcoreapp3.1\ITS.Shared.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\Shared\obj\Debug\netcoreapp3.1\ITS.Shared.pdb

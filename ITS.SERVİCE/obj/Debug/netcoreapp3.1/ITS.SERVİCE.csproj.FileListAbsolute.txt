@@ -10,3 +10,5 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreap
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.CORE.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.Shared.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.CORE.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\bin\Debug\netcoreapp3.1\ITS.Shared.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.SERVİCE\obj\Debug\netcoreapp3.1\ITS.SERVİCE.csproj.CopyComplete

@@ -1,7 +1,10 @@
 using FluentValidation.AspNetCore;
 using ITS.CORE.Entites;
+using ITS.CORE.Services;
 using ITS.DATA.Context;
 using ITS.Shared;
+using ITS.SERVÝCE;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,6 +19,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ITS.SERVÝCE.Service;
+using ITS.CORE.Repository;
+using ITS.DATA.Implementasyon;
+using ITS.CORE.UnitOfWork;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using ITS.SERVÝCE.Security;
 
 namespace IsciTakipSistemi
 {
@@ -33,15 +42,23 @@ namespace IsciTakipSistemi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITokenService, CustomTokenService>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServicesGeneric<,>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             //FluentValidation Serrvisini AddFluetValidation ile uygulamaya entegre edecez
             //Entitlere gelen validationlarýn nerde tututulduðunu sisteme bildirmemiz lazým 
             //RegisterValidatorsFromAssemblyContaining içinde tanýmladýðýmýz sýnýf neyse o sýnýfýn içinde bulunduðu 
             //Asembly bulup o asembly içerisindeki tüm validater larý bulup sisteme entegre edicek
             services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
-            services.AddDbContext<ApplicationDbContext>(opt =>
+            services.AddDbContext<ApplicationDbContext>(options =>
             {
-                opt.UseSqlServer(Configuration["ConnectionStrings:DefaultConnectionString"]);
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"), sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly("JWT.DATA");
+                });
             });
             services.AddIdentity<Cavus, IdentityRole>(opt=> {
 
@@ -56,6 +73,28 @@ namespace IsciTakipSistemi
                 ).AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<CustomTokenOptions>(Configuration.GetSection("TokenAyar"));
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+            {
+                var tokenOptionss = Configuration.GetSection("TokenAyar").Get<CustomTokenOptions>();
+                opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidIssuer = tokenOptionss.Issuer,
+                    ValidAudience = tokenOptionss.Audience[0],
+                    IssuerSigningKey = CustomSecurity.GetSymetricSecurityKey(tokenOptionss.SecuritKey),
+
+                    ValidateIssuerSigningKey = true,
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ClockSkew = TimeSpan.Zero
+
+
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +109,7 @@ namespace IsciTakipSistemi
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

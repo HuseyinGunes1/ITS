@@ -55,7 +55,6 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netco
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.AssemblyInfoInputs.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.AssemblyInfo.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.csproj.CoreCompileInputs.cache
-C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\IsciTakipSistemi.StaticWebAssets.Manifest.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\IsciTakipSistemi.StaticWebAssets.xml
@@ -65,3 +64,17 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netco
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.pdb
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.genruntimeconfig.cache
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\ITS.Shared.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\ITS.Shared.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\obj\Debug\netcoreapp3.1\IsciTakipSistemi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\ITS.SERVİCE.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi\bin\Debug\netcoreapp3.1\ITS.SERVİCE.pdb

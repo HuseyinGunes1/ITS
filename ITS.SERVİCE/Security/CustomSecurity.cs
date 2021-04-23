@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ITS.SERVİCE.Security
 {
-   internal static class CustomSecurity
+   public static class CustomSecurity
     {
         public static SecurityKey GetSymetricSecurityKey(string key)
         {

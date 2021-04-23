@@ -9,6 +9,6 @@ namespace ITS.CORE.Services
 {
    public interface ITokenService
     {
-        TokenEntity CreateToken(Cavus cavus);
+        TokenDto CreateToken(Cavus cavus);
     }
 }

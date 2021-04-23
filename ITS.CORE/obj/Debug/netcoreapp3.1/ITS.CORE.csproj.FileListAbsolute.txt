@@ -7,3 +7,6 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\obj\Debug\netcoreapp3.1
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\obj\Debug\netcoreapp3.1\ITS.CORE.csproj.CoreCompileInputs.cache
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\obj\Debug\netcoreapp3.1\ITS.CORE.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\obj\Debug\netcoreapp3.1\ITS.CORE.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\bin\Debug\netcoreapp3.1\ITS.Shared.dll
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\bin\Debug\netcoreapp3.1\ITS.Shared.pdb
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\ITS.CORE\obj\Debug\netcoreapp3.1\ITS.CORE.csproj.CopyComplete

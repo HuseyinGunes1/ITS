@@ -9,6 +9,7 @@ namespace ITS.CORE.Services
 {
    public interface IUserService
     {
-        Task<Response<CavusDto>> GetUserAsync(CreateUserDto createUserDto);
+        Task<Response<CavusDto>> CreateUserAsync(CreateUserDto createUserDto);
+        Task<Response<CavusDto>> GetUserByNameAsync(string userName);
     }
 }
