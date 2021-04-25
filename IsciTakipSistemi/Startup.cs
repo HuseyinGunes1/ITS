@@ -44,6 +44,9 @@ namespace IsciTakipSistemi
         {
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IIsciService, IsciService>();
+            services.AddScoped<IIsService, IsService>();
+            services.AddScoped<IIsverenService, IsverenService>();
             services.AddScoped<ITokenService, CustomTokenService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServicesGeneric<,>));
@@ -57,7 +60,7 @@ namespace IsciTakipSistemi
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"), sqlOptions =>
                 {
-                    sqlOptions.MigrationsAssembly("JWT.DATA");
+                    sqlOptions.MigrationsAssembly("ITS.DATA");
                 });
             });
             services.AddIdentity<Cavus, IdentityRole>(opt=> {

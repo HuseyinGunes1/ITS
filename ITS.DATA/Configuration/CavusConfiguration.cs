@@ -13,17 +13,11 @@ namespace ITS.DATA.Configuration
         {
            
 
-            builder.HasIndex(e => e.GrupId)
-                .HasName("IX_Cavus")
-                .IsUnique();
+           
 
             
                
-            builder.HasOne(d => d.Grup)
-                .WithOne(p => p.Cavus)
-                .HasForeignKey<Cavus>(d => d.GrupId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Cavus_Grup");
+           
         }
     }
 }

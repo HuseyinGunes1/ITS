@@ -24,9 +24,9 @@ namespace ITS.SERVİCE.Service
 		}
 		public async Task<Response<CavusDto>> CreateUserAsync(CreateUserDto createUserDto)
 		{
-			var user = new Cavus { Email = createUserDto.Email, UserName = createUserDto.UserName };
+			var user = new Cavus { Email = createUserDto.Email, UserName = createUserDto.UserName ,GrupId=createUserDto.GrupId};
 			var result = await _kullanici.CreateAsync(user, createUserDto.Password);
-			if (result.Succeeded)
+			if (!result.Succeeded)
 			{
 				var errors = result.Errors.Select(x => x.Description).ToList();
 				return Response<CavusDto>.Basarisiz(new ErrorDto(errors, true), 400);
