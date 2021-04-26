@@ -56,9 +56,9 @@ namespace ITS.DATA.Implementasyon
             return _dbset.Where(predicate);
         }
 
-        public double WhereUcret(Expression<Func<TEntity, bool>> predicate)
+        public decimal WhereToplam(Expression<Func<TEntity, decimal>> predicate)
         {
-            throw new NotImplementedException();
+            return _dbset.Sum(predicate);
         }
     }
 }

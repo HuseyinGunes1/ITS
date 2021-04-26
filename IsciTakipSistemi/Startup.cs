@@ -45,6 +45,10 @@ namespace IsciTakipSistemi
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IIsciService, IsciService>();
+            services.AddScoped<IAileService, AileService>();
+            services.AddScoped<IGiderService, GiderService>();
+            services.AddScoped<IIsIsciService, IsIsciService>();
+            services.AddScoped(typeof(ISumService<,>), typeof(SumService<,>));
             services.AddScoped<IIsService, IsService>();
             services.AddScoped<IIsverenService, IsverenService>();
             services.AddScoped<ITokenService, CustomTokenService>();

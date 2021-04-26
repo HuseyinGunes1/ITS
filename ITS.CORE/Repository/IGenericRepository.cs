@@ -15,8 +15,9 @@ namespace ITS.CORE.Repository
         Task<TEntity> GetAllByIdAsync(int id);
 
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
+        
 
-        double WhereUcret(Expression<Func<TEntity, bool>> predicate);
+        decimal WhereToplam(Expression<Func<TEntity,decimal>> predicate);
         TEntity Update(TEntity entity);
     }
 }

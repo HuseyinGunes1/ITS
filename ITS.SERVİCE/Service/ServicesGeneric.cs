@@ -78,5 +78,7 @@ namespace ITS.SERVİCE.Service
 			var list = _genericRepository.Where(predicate);
 			return Response<IEnumerable<TDto>>.Basarili(ObjectMapper.MapperIslemleri.Map<IEnumerable<TDto>>(await list.ToListAsync()), 200);
 		}
+
+
 	}
 }
