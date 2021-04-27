@@ -1,4 +1,6 @@
-﻿using ITS.CORE.Repository;
+﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
+using ITS.CORE.Repository;
 using ITS.DATA.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -29,6 +31,58 @@ namespace ITS.DATA.Implementasyon
         {
            return await _dbset.ToListAsync();
         }
+        public IEnumerable<CreateIsciBilgiDto> GetAllJoin(int id,bool durumu)
+        {
+            IEnumerable<CreateIsciBilgiDto> p =  ( from a in _dbContext.Set<Is>()
+                     join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
+                     join ka in _dbContext.Set<Isveren>() on a.IsverenId equals ka.IsverenId
+                     where v.IsId == id && v.Durumu == durumu
+                     orderby a.Tarih descending
+
+                     select new CreateIsciBilgiDto
+                     {
+                        IsAdi= a.IsAdi,
+                        Tarih= a.Tarih,
+                        Durumu= v.Durumu,
+                        IsverenAdi= ka.IsverenAdi,
+                        IsverenSoyadi= ka.IsverenSoyadi
+
+                     }).ToList();
+
+            
+
+            return p;
+
+                         
+                         
+        }
+
+        public int GetAllToplamJoin(int id, bool durumu)
+        {
+            IEnumerable<CreateIsciBilgiDto> p = (from a in _dbContext.Set<Is>()
+                                                 join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
+                                                 join ka in _dbContext.Set<Isveren>() on a.IsverenId equals ka.IsverenId
+                                                 where v.IsId == id && v.Durumu == durumu
+                                                 orderby a.Tarih descending
+
+                                                 select new CreateIsciBilgiDto
+                                                 {
+                                                     IsAdi = a.IsAdi,
+                                                     Tarih = a.Tarih,
+                                                     Durumu = v.Durumu,
+                                                     IsverenAdi = ka.IsverenAdi,
+                                                     IsverenSoyadi = ka.IsverenSoyadi
+
+                                                 }).ToList();
+
+          int Toplam= p.Count();
+
+            return Toplam;
+
+
+
+        }
+
 
         public async Task<TEntity> GetAllByIdAsync(int id)
         {

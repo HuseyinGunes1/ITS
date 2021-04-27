@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace ITS.CORE.Services
 {
-	public interface ISumService<T, TDto> where T : class where TDto : class
+	public interface ISumService<T> where T : class 
 	{
 	decimal Where(Expression<Func<T, decimal>> predicate);
+    public  Task<IEnumerable<T>> AddAllAsync(IEnumerable<T> liste);
+		
 	}
 }

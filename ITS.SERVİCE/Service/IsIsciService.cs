@@ -1,4 +1,6 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
+using ITS.CORE.Repository;
 using ITS.CORE.Services;
 using ITS.Shared;
 using System;
@@ -10,29 +12,34 @@ namespace ITS.SERVİCE.Service
 {
 	public class IsIsciService : IIsIsciService
 	{
-		public Task<Response<IEnumerable<CreateIsIsciDto>>> AddIsAsync(List<CreateIsIsciDto> IsIsci)
+		private readonly IServiceGeneric<IsIsci, CreateIsIsciDto> _serviceGeneric;
+		private readonly ISumService< CreateIsIsciDto> _sumService;
+		
+		private readonly IGenericRepository<CreateIsciBilgiDto> _IsciBilgigenericRepository;
+		
+		public IsIsciService(IServiceGeneric<IsIsci, CreateIsIsciDto> serviceGeneric, ISumService< CreateIsIsciDto> sumService, IGenericRepository<CreateIsciBilgiDto> IsciBilgigenericRepository)
 		{
-			throw new NotImplementedException();
+			_IsciBilgigenericRepository = IsciBilgigenericRepository;
+			_serviceGeneric = serviceGeneric;
+			_sumService = sumService;
+		}
+		public  async Task<IEnumerable<CreateIsIsciDto>> AddIsAsync(IEnumerable<CreateIsIsciDto> isIsci)
+		{
+
+			return await _sumService.AddAllAsync(isIsci);
 		}
 
-		public Task<Response<IEnumerable<CreateIsciBilgiDto>>> GeldigiGunAllAsync(int isciId)
+		public IEnumerable<CreateIsciBilgiDto> GunAllAsync(int isciId,bool durumu)
 		{
-			throw new NotImplementedException();
+			return _IsciBilgigenericRepository.GetAllJoin(isciId, durumu);
 		}
 
-		public Task<int> GeldigiGunAsync(int isciId)
+		public int ToplamGunAsync(int isciId, bool durumu)
 		{
-			throw new NotImplementedException();
+			return _IsciBilgigenericRepository.GetAllToplamJoin(isciId, durumu);
+			
 		}
 
-		public Task<Response<IEnumerable<CreateIsciBilgiDto>>> GelmedigiGunAllAsync(int isciId)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task<int> GelmedigiGunAsync(int isciId)
-		{
-			throw new NotImplementedException();
-		}
+		
 	}
 }

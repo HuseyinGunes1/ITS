@@ -12,7 +12,7 @@ namespace ITS.CORE.Services
 	{
 		
 		public Task<Response<CreateGiderDto>> AddIsAsync(CreateGiderDto gider);
-		public Task<decimal> GetGiderAsync(int isciid);
+		public decimal GetGiderAsync(int isciid);
 		public Task<Response<IEnumerable<CreateGiderDto>>> GetAllGiderAsync(int isciid);
 		
 	}

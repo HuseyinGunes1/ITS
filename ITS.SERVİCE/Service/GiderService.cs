@@ -13,8 +13,8 @@ namespace ITS.SERVİCE.Service
 	public class GiderService:IGiderService
 	{
 		private readonly IServiceGeneric<Gider, CreateGiderDto> _serviceGeneric;
-		private readonly ISumService<Gider, CreateGiderDto> _sumService;
-		public GiderService(IServiceGeneric<Gider, CreateGiderDto> serviceGeneric, ISumService<Gider, CreateGiderDto> sumService)
+		private readonly ISumService< CreateGiderDto> _sumService;
+		public GiderService(IServiceGeneric<Gider, CreateGiderDto> serviceGeneric, ISumService< CreateGiderDto> sumService)
 		{
 			_serviceGeneric = serviceGeneric;
 			_sumService = sumService;

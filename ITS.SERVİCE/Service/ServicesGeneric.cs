@@ -34,6 +34,7 @@ namespace ITS.SERVİCE.Service
 		public async Task<Response<IEnumerable<TDto>>> GetAllAsync()
 		{
 			var Product = ObjectMapper.MapperIslemleri.Map<List<TDto>>(await _genericRepository.GetAllAsync());//gelen entityi maperladık
+			
 			return Response<IEnumerable<TDto>>.Basarili(Product, 200);//dto nesnesini geriye dönderdik
 		}
 
