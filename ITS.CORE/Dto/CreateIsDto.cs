@@ -8,7 +8,7 @@ namespace ITS.CORE.Dto
 	{
 		public CreateIsDto()
 		{
-			Tarih = DateTime.Now;
+			Tarih = DateTime.Today.Date;
 		}
 		public int IsId { get; set; }
 		public string IsAdi { get; set; }

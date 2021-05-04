@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.Shared;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace ITS.CORE.Services
 {
 	public interface IIsverenService
 	{
-		Task<Response<CreateIsverenDto>> CreateIsverenAsync(CreateIsverenDto createUserDto);
+		Task<Isveren> CreateIsverenAsync(CreateIsverenDto createUserDto);
+		Task<IEnumerable<CreateIsverenDto>> GetIsverenAsync();
 	}
 }

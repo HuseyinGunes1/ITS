@@ -1570,6 +1570,7 @@
         "dependencies": {
           "AutoMapper": "10.1.1",
           "ITS.CORE": "1.0.0",
+          "ITS.DATA": "1.0.0",
           "ITS.Shared": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.10.2"
         },

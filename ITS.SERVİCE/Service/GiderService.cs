@@ -20,12 +20,12 @@ namespace ITS.SERVİCE.Service
 			_sumService = sumService;
 		}
 
-		public async Task<Response<CreateGiderDto>> AddIsAsync(CreateGiderDto gider)
+		public async Task<Gider> AddIsAsync(CreateGiderDto gider)
 		{
 			return await _serviceGeneric.AddAsync(gider);
 		}
 
-		public Task<Response<IEnumerable<CreateGiderDto>>> GetAllGiderAsync(int isciid)
+		public IEnumerable<Gider> GetAllGiderAsync(int isciid)
 		{
 			var liste = _serviceGeneric.Where(x => x.IsciId == isciid);
 			
@@ -35,8 +35,12 @@ namespace ITS.SERVİCE.Service
 		public decimal GetGiderAsync(int isciid)
 		{
 			var liste = _serviceGeneric.Where(x => x.IsciId == isciid);
-			decimal a = _sumService.Where(liste => liste.GiderTutar);
-			return a;
+			 
+
+
+			return liste.Sum(x => x.GiderTutar);
+
+
 		}
 	}
 }

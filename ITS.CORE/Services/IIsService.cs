@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.Shared;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace ITS.CORE.Services
 {
 	public interface IIsService
 	{
-		public Task<Response<CreateIsDto>> AddIsAsync(CreateIsDto Isci);
-		public Task<Response<IEnumerable<CreateIsDto>>> GetIsAsync(int grupId);
+		public Task<Is> AddIsAsync(CreateIsDto Isci);
+		public Task<IEnumerable<CreateIsDto>> GetIsAsync(int grupId);
 	}
 }

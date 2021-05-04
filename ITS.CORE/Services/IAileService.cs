@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.Shared;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace ITS.CORE.Services
 {
 	public interface IAileService
 	{
-		public Task<Response<CreateAileDto>> AddIsAsync(CreateAileDto aile);
+		public Task<Aile> AddIsAsync(CreateAileDto aile);
 		
 	}
 }

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ITS.CORE.Dto.CreateIsciDto>
+	
+	@{
+		ViewData["Title"] = "Index";
+		Layout = "~/Views/Shared/View.cshtml";
+	}
+
+	<div class="table-wrapper">
+		<div class="table-title">
+			<div class="row">
+				<div class="col-sm-12 ">
+
+					<h4 style="padding:1rem;color:white; font-size: 1.5rem; float: left;">İşçi Bilgileri</h4>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+
+						<th scope="col">İşçi Adı</th>
+						<th scope="col">İşçi Soyadı</th>
+						<th scope="col">İşçi Grubu</th>
+						<th scope="col">
+							Geldiği Günler
+						</th>
+						<th scope="col">
+							Gelmediği Günler
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var i in Model)
+					{
+
+
+					<tr>
+
+						<td>@i.IsciAdi</td>
+						<td>@i.IsciSoyadi</td>
+						<td>@i.GrupId</td>
+						<td >
+							<a asp-controller="Isci" asp-action="IsciDetay" asp-route-isciId="@i.IsciId" asp-route-durumu="true"  ><i class='bx bx-calendar' style='color:rgba(30,194,210,0.99);font-size: 1.7rem '></i></a>
+						</td>
+						<td >
+							<a asp-controller="Isci" asp-action="IsciDetay" asp-route-isciId="@i.IsciId" asp-route-durumu="false"  ><i class='bx bx-calendar-x' style='color:rgba(30,194,210,0.99);font-size: 1.7rem '></i></a>
+						</td>
+					</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+

@@ -23,10 +23,10 @@ namespace ITS.SERVİCE.Service
 			_serviceGeneric = serviceGeneric;
 			_sumService = sumService;
 		}
-		public  async Task<IEnumerable<CreateIsIsciDto>> AddIsAsync(IEnumerable<CreateIsIsciDto> isIsci)
+		public  async Task<IEnumerable<CreateIsIsciDto>> AddIsIsciAsync(IEnumerable<CreateIsIsciDto> isIsci)
 		{
 
-			return await _sumService.AddAllAsync(isIsci);
+			return await _serviceGeneric.AddAllAsync(isIsci);
 		}
 
 		public IEnumerable<CreateIsciBilgiDto> GunAllAsync(int isciId,bool durumu)

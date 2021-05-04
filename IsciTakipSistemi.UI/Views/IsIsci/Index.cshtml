@@ -1,0 +1,133 @@
+﻿@model (IEnumerable<ITS.CORE.Dto.CreateIsciDto>, ITS.CORE.Dto.CreateIsverenDto, ITS.CORE.Dto.CreateIsDto,List< ITS.CORE.Dto.CreateIsIsciDto>)
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/View.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<form asp-controller="IsIsci" asp-action="Index">
+	
+
+
+
+
+	<div class="table-wrapper">
+		<div class="table-title">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><p> <i id="modali" class='bx bx-plus'></i> Kayıt Ekle  </p></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+						</th>
+						<th scope="col">İşçi Adı</th>
+						<th scope="col">İşçi Soyadı</th>
+						<th scope="col">İşçi Grubu</th>
+					</tr>
+				</thead>
+				<tbody>
+
+
+					@{
+						int j = 0;
+					}
+
+					@foreach (var i in Model.Item1)
+					{
+
+						List<ITS.CORE.Dto.CreateIsIsciDto> a = new List<ITS.CORE.Dto.CreateIsIsciDto>();
+
+						List<bool> t = new List<bool>();
+
+						ITS.CORE.Dto.CreateIsIsciDto d = new ITS.CORE.Dto.CreateIsIsciDto
+						{
+							IsciId = @i.IsciId,
+
+						};
+						a.Add(d);
+						Model.Item4.Add(d);
+						<tr>
+							<th>
+								<input class="form-control" type="hidden" asp-for="@Model.Item4[j].IsciId" value="@Model.Item4[j].IsciId" placeholder="İş Adı Giriniz">
+								<input class="form-control" type="hidden" asp-for="@Model.Item4[j].IsId" value="@Model.Item4[j].IsId" placeholder="İş Adı Giriniz">
+
+								<span class="custom-checkbox">
+
+									<input asp-for="@Model.Item4[j].Durumu" type="checkbox" class="checkbox1">
+									<label for="checkbox1"></label>
+
+								</span>
+							</th>
+
+							<td>@i.IsciAdi</td>
+							<td> @i.IsciSoyadi  </td>
+							<td>@i.GrupId</td>
+						</tr>
+
+
+						j++;
+
+					}
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+	<button type="submit" class="mt-5 mb-5 form-control btn btn-primary">Verileri Kaydet</button>
+
+	<div class="modal fade" id="exampleModal">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h5 class="modal-title text-secondary" id="exampleModalLabel">İş/İşvren Ekle</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body ">
+					<div class="col-12 col-md-12 col-sm-12 col-lg-12">
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">İşveren Adı</label>
+							<input class="form-control" type="text" asp-for="Item2.IsverenAdi" placeholder="İşveren Adını Giriniz">
+
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">İşveren Soyadı</label>
+							<input class="form-control" type="text" asp-for="Item2.IsverenSoyadi" placeholder="İşveren Soyadını Giriniz">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">İş Adı</label>
+							<input class="form-control" type="text" asp-for="Item3.IsAdi" placeholder="İş Adı Giriniz">
+						</div>
+
+
+
+					</div>
+
+				</div>
+				<div class="modal-footer">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>

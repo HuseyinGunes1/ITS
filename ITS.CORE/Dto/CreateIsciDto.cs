@@ -11,5 +11,6 @@ namespace ITS.CORE.Dto
 		public string IsciSoyadi { get; set; }
 		public int AileId { get; set; }
 		public int GrupId { get; set; }
+		
 	}
 }

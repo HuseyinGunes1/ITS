@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace IsciTakipSistemi.Controllers.IsverenController
 {
 	[ApiController]
-	[Route("api/[controller]")]
+	[Route("api/[controller]/[action]")]
 	public class IsverenController :CustomBaseController
 	{
 		private readonly IIsverenService _ısverenService;
@@ -23,9 +24,15 @@ namespace IsciTakipSistemi.Controllers.IsverenController
 
 		
 		[HttpPost]
-		public async Task<IActionResult> Add(CreateIsverenDto dto)
+		public async Task<Isveren> Add(CreateIsverenDto dto)
 		{
-			return ActionInstance(await _ısverenService.CreateIsverenAsync(dto));
+			return await _ısverenService.CreateIsverenAsync(dto);
+		}
+		[HttpGet]
+		public async Task<IEnumerable<CreateIsverenDto>> Get()
+		{
+
+			return await _ısverenService.GetIsverenAsync();
 		}
 	}
 }

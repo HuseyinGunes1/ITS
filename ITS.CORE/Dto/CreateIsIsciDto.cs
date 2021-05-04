@@ -8,6 +8,6 @@ namespace ITS.CORE.Dto
 	{
 		public int IsciId { get; set; }
 		public int IsId { get; set; }
-		public bool? Durumu { get; set; }
+		public bool Durumu { get; set; }
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using ITS.Shared;
 using Microsoft.AspNetCore.Authorization;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 namespace IsciTakipSistemi.Controllers.IsciController
 {
 	[ApiController]
-	[Route("api/[controller]")]
+	[Route("api/[controller]/[action]")]
 	public class IsciController : CustomBaseController
 	{
 		private readonly IIsciService _ısciService;
@@ -24,17 +25,17 @@ namespace IsciTakipSistemi.Controllers.IsciController
 
 		[Authorize]
 		[HttpPost]
-		public async Task<IActionResult> Add(CreateIsciDto dto)
+		public async Task<Isci> Add(CreateIsciDto dto)
 		{
-			return ActionInstance(await _ısciService.AddIsciAsync(dto));
+			return await _ısciService.AddIsciAsync(dto);
 		}
 
-		[Authorize]
+		
 		[HttpGet]
-		public async Task<IActionResult> Get()
+		public async Task<IEnumerable<CreateIsciDto>> Get()
 		{
-			var user = await _userService.GetUserByNameAsync(HttpContext.User.Identity.Name);
-			return ActionInstance(await _ısciService.GetIsciAsync(user.data.GrupId));
+			var user = await _userService.GetUserByNameAsync("usame.215487");
+			return await _ısciService.GetIsciAsync(user.data.GrupId);
 		}
 
 	}

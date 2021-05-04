@@ -20,11 +20,7 @@ namespace ITS.SERVİCE.Service
 			_unitOfWork = unitOfWork;
 			_genericRepository = genericRepository;
 		}
-		public decimal Where(Expression<Func<T, decimal>> predicate)
-		{
-			decimal a =  _genericRepository.WhereToplam(predicate);
-			return a;
-		}
+		
 
 		public async Task<IEnumerable<T>> AddAllAsync(IEnumerable<T> liste)
 		{
@@ -34,9 +30,11 @@ namespace ITS.SERVİCE.Service
 				var newEntity= ObjectMapper.MapperIslemleri.Map<T>(i);
 				await _genericRepository.AddAsync(newEntity);
 				await _unitOfWork.CommitAsync();
-				
+
+
 			}
 			
+
 			return liste;
 		}
 

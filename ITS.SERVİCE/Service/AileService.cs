@@ -17,7 +17,7 @@ namespace ITS.SERVİCE.Service
 			_serviceGeneric = serviceGeneric;
 		}
 
-		public async Task<Response<CreateAileDto>> AddIsAsync(CreateAileDto aile)
+		public async Task<Aile> AddIsAsync(CreateAileDto aile)
 		{
 			return await _serviceGeneric.AddAsync(aile);
 		}

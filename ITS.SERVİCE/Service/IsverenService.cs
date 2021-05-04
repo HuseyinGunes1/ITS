@@ -16,9 +16,14 @@ namespace ITS.SERVİCE.Service
 		{
 			_serviceGeneric = serviceGeneric;
 		}
-		public async Task<Response<CreateIsverenDto>> CreateIsverenAsync(CreateIsverenDto createUserDto)
+		public async Task<Isveren> CreateIsverenAsync(CreateIsverenDto createUserDto)
 		{
 			return await _serviceGeneric.AddAsync(createUserDto);
+		}
+
+		public async Task<IEnumerable<CreateIsverenDto>> GetIsverenAsync()
+		{
+			return await _serviceGeneric.GetAllAsync();
 		}
 	}
 }

@@ -9,7 +9,7 @@ namespace ITS.CORE.Services
 {
 	public interface IIsIsciService
 	{
-		public Task<IEnumerable<CreateIsIsciDto>> AddIsAsync(IEnumerable<CreateIsIsciDto> IsIsci);
+		public Task<IEnumerable<CreateIsIsciDto>> AddIsIsciAsync(IEnumerable<CreateIsIsciDto> IsIsci);
 		public int ToplamGunAsync(int isciId, bool durumu);
 		public IEnumerable<CreateIsciBilgiDto> GunAllAsync(int isciId, bool durumu);
 		

@@ -10,7 +10,7 @@ namespace ITS.CORE.Services
 {
 	public interface IIsciService
 	{
-		public Task<Response<CreateIsciDto>> AddIsciAsync(CreateIsciDto Isci);
-		public Task<Response<IEnumerable<CreateIsciDto>>> GetIsciAsync(int grupId);
+		public Task<Isci> AddIsciAsync(CreateIsciDto Isci);
+		public Task<IEnumerable<CreateIsciDto>> GetIsciAsync(int grupId);
 	}
 }

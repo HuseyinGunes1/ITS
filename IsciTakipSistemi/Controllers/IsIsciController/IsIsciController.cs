@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace IsciTakipSistemi.Controllers.IsIsciController
 {
 	[ApiController]
-	[Route("api/[controller]")]
+	[Route("api/[controller]/[action]/{isciid?}/{durumu?}")]
 	public class IsIsciController :ControllerBase
 	{
 		private readonly IIsIsciService _isisciService;
@@ -21,9 +21,21 @@ namespace IsciTakipSistemi.Controllers.IsIsciController
 		}
 
 		[HttpPost]
-		public async Task<IEnumerable<CreateIsIsciDto>> Add(IEnumerable<CreateIsIsciDto> isisci)
+		public async Task<IEnumerable<CreateIsIsciDto>> EkleIsIsci(IEnumerable<CreateIsIsciDto> isisci)
 		{
-			return await _isisciService.AddIsAsync(isisci);
+			return await _isisciService.AddIsIsciAsync(isisci);
+		}
+
+		[HttpGet]
+		public IEnumerable<CreateIsciBilgiDto> GunAll(int isciId, bool durumu)
+		{
+			return _isisciService.GunAllAsync(isciId, durumu);
+		}
+
+		[HttpGet]
+		public int ToplamGunAll(int isciId, bool durumu)
+		{
+			return _isisciService.ToplamGunAsync(isciId, durumu)*100;
 		}
 	}
 }

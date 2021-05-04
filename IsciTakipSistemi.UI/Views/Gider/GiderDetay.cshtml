@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ITS.CORE.Entites.Gider>
+@{
+	ViewData["Title"] = "GiderDetay";
+	Layout = "~/Views/Shared/View.cshtml";
+}
+
+<div class="row d-flex justify-content-center mt-2">
+
+
+	<div class="col-sm-3 p-2 m-2">
+		<div class="card bg-warning rounded ">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i> ÜCRET</h5><br>
+				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Ucret</i></h4>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 p-2 m-2">
+		<div class="card bg-danger rounded ">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i> GİDER</h5><br>
+				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Gider</i></h4>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 p-2 m-2">
+		<div class="card bg-primary rounded ">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<h5 class="card-text text-white"><i class='bx bx-calendar ' style='color:#f7f4f4; font-size: 1.5rem;'></i>TOPLAM ÜCRET</h5><br>
+				<h4 class="card-text text-white"> @ViewBag.Total</h4>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+<div class="table-wrapper">
+	<div class="table-title">
+		<div class="row">
+			<div class="col-sm-12 ">
+
+				<h4 style="padding:1rem;color:white; font-size: 1.5rem; float: left;">Gider İşlemleri</h4>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+
+					<th scope="col">Gider Kişi</th>
+					<th scope="col">Tarih</th>
+					<th scope="col">Gider Tutar</th>
+					<th scope="col">Gider Açıklama</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var i in Model)
+				{
+
+
+					<tr>
+
+						<td>@i.GiderKisi</td>
+						<td>@i.GiderTarih</td>
+						<td>@i.GiderTutar</td>
+						<td>@i.GiderAciklama</td>
+
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+
+

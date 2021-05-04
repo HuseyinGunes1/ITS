@@ -17,12 +17,12 @@ namespace ITS.SERVİCE.Service
 			_serviceGeneric = serviceGeneric;
 		}
 
-		public async Task<Response<CreateIsDto>> AddIsAsync(CreateIsDto Is)
+		public async Task<Is> AddIsAsync(CreateIsDto Is)
 		{
 			return await _serviceGeneric.AddAsync(Is);
 		}
 
-		public async Task<Response<IEnumerable<CreateIsDto>>> GetIsAsync(int grupId)
+		public async Task<IEnumerable<CreateIsDto>> GetIsAsync(int grupId)
 		{
 			return await _serviceGeneric.GetAllAsync();
 		}

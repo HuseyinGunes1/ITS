@@ -18,7 +18,7 @@ namespace ITS.CORE.Repository
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
         public int GetAllToplamJoin(int id, bool durumu);
         public IEnumerable<CreateIsciBilgiDto> GetAllJoin(int id,bool durumu);
-        decimal WhereToplam(Expression<Func<TEntity,decimal>> predicate);
+        
         TEntity Update(TEntity entity);
     }
 }

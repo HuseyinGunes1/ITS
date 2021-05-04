@@ -36,7 +36,7 @@ namespace ITS.DATA.Implementasyon
             IEnumerable<CreateIsciBilgiDto> p =  ( from a in _dbContext.Set<Is>()
                      join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
                      join ka in _dbContext.Set<Isveren>() on a.IsverenId equals ka.IsverenId
-                     where v.IsId == id && v.Durumu == durumu
+                     where v.IsciId== id && v.Durumu == durumu
                      orderby a.Tarih descending
 
                      select new CreateIsciBilgiDto
@@ -62,7 +62,7 @@ namespace ITS.DATA.Implementasyon
             IEnumerable<CreateIsciBilgiDto> p = (from a in _dbContext.Set<Is>()
                                                  join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
                                                  join ka in _dbContext.Set<Isveren>() on a.IsverenId equals ka.IsverenId
-                                                 where v.IsId == id && v.Durumu == durumu
+                                                 where v.IsciId == id && v.Durumu == durumu
                                                  orderby a.Tarih descending
 
                                                  select new CreateIsciBilgiDto
@@ -110,9 +110,6 @@ namespace ITS.DATA.Implementasyon
             return _dbset.Where(predicate);
         }
 
-        public decimal WhereToplam(Expression<Func<TEntity, decimal>> predicate)
-        {
-            return _dbset.Sum(predicate);
-        }
+       
     }
 }

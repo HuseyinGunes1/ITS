@@ -11,10 +11,11 @@ namespace ITS.CORE.Services
 	public interface IServiceGeneric<T, TDto> where T : class where TDto : class
 	{
         Task<Response<TDto>> GetIdAsync(int id);
-        Task<Response<IEnumerable<TDto>>> GetAllAsync();
-        Task<Response<IEnumerable<TDto>>> Where(Expression<Func<T, bool>> predicate);
-        Task<Response<TDto>> AddAsync(TDto entity);
+        Task<IEnumerable<TDto>> GetAllAsync();
+        public IEnumerable<T> Where(Expression<Func<T, bool>> predicate);
+        Task<T> AddAsync(TDto entity);
         Task<Response<NoDataDto>> Remove(int id);
         Task<Response<NoDataDto>> Update(TDto entity, int id);
+        Task<IEnumerable<TDto>> AddAllAsync(IEnumerable<TDto> liste);
     }
 }
