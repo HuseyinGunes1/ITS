@@ -28,9 +28,9 @@ namespace IsciTakipSistemi.Controllers.IsController
 			return await _isService.AddIsAsync(Is);
 		}
 		[HttpGet]
-		public async Task<IEnumerable<CreateIsDto>> GetIsAsync(int grupId)
+		public async Task<IEnumerable<CreateIsDto>> Get()
 		{
-			return await _isService.GetIsAsync(grupId);
+			return await _isService.GetIsAsync();
 		}
 	}
 }

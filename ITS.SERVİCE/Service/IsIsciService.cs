@@ -40,6 +40,9 @@ namespace ITS.SERVİCE.Service
 			
 		}
 
-		
+		public async Task<IEnumerable<IsIsci>> GetIsIsciAsync()
+		{
+			return await _serviceGeneric.GetAllAsync2();
+		}
 	}
 }

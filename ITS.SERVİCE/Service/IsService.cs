@@ -22,7 +22,7 @@ namespace ITS.SERVİCE.Service
 			return await _serviceGeneric.AddAsync(Is);
 		}
 
-		public async Task<IEnumerable<CreateIsDto>> GetIsAsync(int grupId)
+		public async Task<IEnumerable<CreateIsDto>> GetIsAsync()
 		{
 			return await _serviceGeneric.GetAllAsync();
 		}

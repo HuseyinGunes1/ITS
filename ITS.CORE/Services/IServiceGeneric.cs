@@ -17,5 +17,6 @@ namespace ITS.CORE.Services
         Task<Response<NoDataDto>> Remove(int id);
         Task<Response<NoDataDto>> Update(TDto entity, int id);
         Task<IEnumerable<TDto>> AddAllAsync(IEnumerable<TDto> liste);
+        public  Task<IEnumerable<T>> GetAllAsync2();
     }
 }

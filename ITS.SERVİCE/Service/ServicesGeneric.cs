@@ -57,6 +57,12 @@ namespace ITS.SERVİCE.Service
 			
 			return Product;//dto nesnesini geriye dönderdik
 		}
+		public async Task<IEnumerable<T>> GetAllAsync2()
+		{
+			var Product = await _genericRepository.GetAllAsync();
+
+			return Product;
+		}
 
 		public async Task<Response<TDto>> GetIdAsync(int id)
 		{

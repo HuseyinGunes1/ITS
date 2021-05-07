@@ -1,0 +1,53 @@
+﻿@model List<ITS.CORE.Dto.CreateIsverenDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/View.cshtml";
+}
+
+<div class="table-wrapper">
+	<div class="table-title">
+		<div class="row">
+			<div class="col-sm-12 ">
+
+				<h4 style="padding:1rem;color:white; font-size: 1.5rem; float: left;">İşveren İşlemleri</h4>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+
+					<th scope="col">İşveren Adı</th>
+					<th scope="col">İşveren Soyadı</th>
+					<th scope="col">
+						İşvren Detay
+					</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var i in Model)
+				{
+
+
+					<tr>
+
+						<td>@i.IsverenAdi</td>
+						<td>@i.IsverenSoyadi</td>
+						
+						<td>
+							<a asp-controller="Isveren" asp-action="IsverenDetay" asp-route-isverenadi="@i.IsverenAdi" asp-route-isverensoyadi="@i.IsverenSoyadi"><i class='bx bx-calendar' style='color:rgba(30,194,210,0.99);font-size: 1.7rem '></i></a>
+						</td>
+						
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+

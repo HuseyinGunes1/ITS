@@ -169,3 +169,5 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\ne
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Isci\IsciDetay.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Gider\Index.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Gider\GiderDetay.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Isveren\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Isveren\IsverenDetay.cshtml.g.cs

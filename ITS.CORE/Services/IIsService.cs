@@ -11,6 +11,6 @@ namespace ITS.CORE.Services
 	public interface IIsService
 	{
 		public Task<Is> AddIsAsync(CreateIsDto Isci);
-		public Task<IEnumerable<CreateIsDto>> GetIsAsync(int grupId);
+		public Task<IEnumerable<CreateIsDto>> GetIsAsync();
 	}
 }

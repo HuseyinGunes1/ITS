@@ -31,25 +31,25 @@
                     <a href="" class="nav_logo">İşçi Takip Sistemi</a>
                 </div>
                
-                <div class="nav_list">
-                     <a href="" class="nav_link">
-                    <i class='bx bx-sticker nav_icon'></i>
-                    <span class="nav_name">İş İşlemleri</span>
-                </a>
-                <a href="" class="nav_link">
-                    <i class='bx bx-user-circle nav_icon '></i>
-                    <span class="nav_name">İşçi İşlemleri</span>
-                </a>
-                <a href="" class="nav_link">
-                    <i class='bx bx-folder nav_icon' ></i>
-                    <span class="nav_name">Gider İşlemleri</span>
-                </a>
-                    <a href="" class="nav_link">
-                        <i class='bx bx-line-chart-down nav_icon' ></i>
-                        <span class="nav_name">İstatistik</span>
-                    </a>
-                   
-                </div>
+				<div class="nav_list">
+					<a asp-controller="IsIsci" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">İş İşlemleri</span>
+					</a>
+					<a asp-controller="Isci" asp-action="Index" class="nav_link">
+						<i class='bx bx-user-circle nav_icon '></i>
+						<span class="nav_name">İşçi İşlemleri</span>
+					</a>
+					<a asp-controller="Gider" asp-action="Index" class="nav_link">
+						<i class='bx bx-folder nav_icon'></i>
+						<span class="nav_name">Gider İşlemleri</span>
+					</a>
+					<a asp-controller="Isveren" asp-action="Index" class="nav_link">
+						<i class='bx bx-line-chart-down nav_icon'></i>
+						<span class="nav_name">İşveren İşlemleri</span>
+					</a>
+
+				</div>
             </div>
             <a href="" class="nav_link">
                 <i class='bx bx-log-out nav_icon' ></i>

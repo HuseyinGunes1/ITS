@@ -8,11 +8,11 @@ namespace ITS.CORE.Dto
 	{
 		public CreateIsDto()
 		{
-			Tarih = DateTime.Today.Date;
+			Tarih = DateTime.Now;
 		}
 		public int IsId { get; set; }
 		public string IsAdi { get; set; }
-		public DateTime Tarih { get; private set; }
+		public DateTime Tarih { get;  set; }
 		public int IsverenId { get; set; }
 		public int GrupId { get; set; }
 	}

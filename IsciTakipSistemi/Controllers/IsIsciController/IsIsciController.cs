@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,6 +37,12 @@ namespace IsciTakipSistemi.Controllers.IsIsciController
 		public int ToplamGunAll(int isciId, bool durumu)
 		{
 			return _isisciService.ToplamGunAsync(isciId, durumu)*100;
+		}
+
+		[HttpGet]
+		public async Task<IEnumerable<IsIsci>> Get()
+		{
+			return await  _isisciService.GetIsIsciAsync();
 		}
 	}
 }

@@ -40,26 +40,25 @@ namespace IsciTakipSistemi.UI.Controllers
 
 		public async Task<IActionResult> GiderDetay(int isciId)
 		{
-			//IEnumerable<CreateIsciBilgiDto> createIsciBilgiDtos;
+			
 			IEnumerable<Gider> Giderler;
-			//var response = await _apiServices._httpClient.GetAsync($"IsIsci/GunAll/{isciId}/{true}");
+			
 			var response2 = await _apiServices._httpClient.GetAsync($"IsIsci/ToplamGunAll/{isciId}/{true}");
 			var response3 = await _apiServices._httpClient.GetAsync($"Gider/AllGider/{isciId}");
-			if (/*response.IsSuccessStatusCode &&*/ response2.IsSuccessStatusCode && response3.IsSuccessStatusCode)
+			if ( response2.IsSuccessStatusCode && response3.IsSuccessStatusCode)
 			{
-				//createIsciBilgiDtos = JsonConvert.DeserializeObject<IEnumerable<CreateIsciBilgiDto>>(await response.Content.ReadAsStringAsync());
+				
 				int k = JsonConvert.DeserializeObject<int>(await response2.Content.ReadAsStringAsync());
 				Giderler = JsonConvert.DeserializeObject<IEnumerable<Gider>>(await response3.Content.ReadAsStringAsync());
 			}
 			else
 			{
-				//createIsciBilgiDtos = null;
+				
 				Giderler = null;
 			}
-			//var DegerString = await response.Content.ReadAsStringAsync();
+			
 			var DegerString2 = await response2.Content.ReadAsStringAsync();
 			var DegerString3 = await response3.Content.ReadAsStringAsync();
-			//IEnumerable<CreateIsciBilgiDto> model = JsonConvert.DeserializeObject<IEnumerable<CreateIsciBilgiDto>>(DegerString);
 			int model2 = JsonConvert.DeserializeObject<int>(DegerString2);
 			IEnumerable<Gider> model3 = JsonConvert.DeserializeObject<IEnumerable<Gider>>(DegerString3);
 			decimal gider = 0;

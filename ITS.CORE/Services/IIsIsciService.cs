@@ -1,4 +1,5 @@
 ﻿using ITS.CORE.Dto;
+using ITS.CORE.Entites;
 using ITS.Shared;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ namespace ITS.CORE.Services
 		public Task<IEnumerable<CreateIsIsciDto>> AddIsIsciAsync(IEnumerable<CreateIsIsciDto> IsIsci);
 		public int ToplamGunAsync(int isciId, bool durumu);
 		public IEnumerable<CreateIsciBilgiDto> GunAllAsync(int isciId, bool durumu);
-		
+		public Task<IEnumerable<IsIsci>> GetIsIsciAsync();
+
+
 	}
 }

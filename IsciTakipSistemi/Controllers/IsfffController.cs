@@ -34,7 +34,7 @@ namespace IsciTakipSistemi.Controllers
 		public async Task<IEnumerable<CreateIsDto>> Get()
 		{
 			var user = await _userService.GetUserByNameAsync(HttpContext.User.Identity.Name);
-			return await _ısService.GetIsAsync(user.data.GrupId);
+			return await _ısService.GetIsAsync();
 		}
 	}
 }
