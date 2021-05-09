@@ -42,14 +42,16 @@ namespace IsciTakipSistemi.UI.Controllers
 		{
 			
 			IEnumerable<Gider> Giderler;
-			
+			IEnumerable<CreateUcretDto> createUcretDtos;
 			var response2 = await _apiServices._httpClient.GetAsync($"IsIsci/ToplamGunAll/{isciId}/{true}");
 			var response3 = await _apiServices._httpClient.GetAsync($"Gider/AllGider/{isciId}");
-			if ( response2.IsSuccessStatusCode && response3.IsSuccessStatusCode)
+			var response4 = await _apiServices._httpClient.GetAsync("Ucret/Get");
+			if ( response2.IsSuccessStatusCode && response3.IsSuccessStatusCode && response4.IsSuccessStatusCode)
 			{
 				
-				int k = JsonConvert.DeserializeObject<int>(await response2.Content.ReadAsStringAsync());
+				double k = JsonConvert.DeserializeObject<double>(await response2.Content.ReadAsStringAsync());
 				Giderler = JsonConvert.DeserializeObject<IEnumerable<Gider>>(await response3.Content.ReadAsStringAsync());
+				createUcretDtos = JsonConvert.DeserializeObject<IEnumerable<CreateUcretDto>>(await response4.Content.ReadAsStringAsync());
 			}
 			else
 			{
@@ -59,17 +61,19 @@ namespace IsciTakipSistemi.UI.Controllers
 			
 			var DegerString2 = await response2.Content.ReadAsStringAsync();
 			var DegerString3 = await response3.Content.ReadAsStringAsync();
-			int model2 = JsonConvert.DeserializeObject<int>(DegerString2);
+			var DegerString4 = await response4.Content.ReadAsStringAsync();
+			double model2 = JsonConvert.DeserializeObject<double>(DegerString2);
 			IEnumerable<Gider> model3 = JsonConvert.DeserializeObject<IEnumerable<Gider>>(DegerString3);
-			decimal gider = 0;
+			var model4 = JsonConvert.DeserializeObject<List<CreateUcretDto>>(DegerString4);
+			double gider = 0;
 			foreach (var i in model3)
 			{
-				gider = gider + i.GiderTutar;
+				gider = gider + Convert.ToDouble(i.GiderTutar);
 			}
 			
-			ViewBag.Ucret = model2;
+			ViewBag.Ucret = (model4[0].IsUcreti*model2)*0.9;
 			ViewBag.Gider = gider;
-			ViewBag.Total = model2 - gider;
+			ViewBag.Total = ((model4[0].IsUcreti * model2) * 0.9) - (gider);
 			return View(Giderler);
 		}
 
