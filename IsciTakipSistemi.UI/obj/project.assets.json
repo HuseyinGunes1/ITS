@@ -8593,6 +8593,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "ITS.CORE >= 1.0.0",
+      "ITS.DATA >= 1.0.0",
       "ITS.SERVİCE >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "Newtonsoft.Json >= 13.0.1"
@@ -8636,6 +8637,9 @@
           "projectReferences": {
             "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.CORE\\ITS.CORE.csproj": {
               "projectPath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.CORE\\ITS.CORE.csproj"
+            },
+            "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.DATA\\ITS.DATA.csproj": {
+              "projectPath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.DATA\\ITS.DATA.csproj"
             },
             "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.SERVİCE\\ITS.SERVİCE.csproj": {
               "projectPath": "C:\\Users\\hüseyin\\source\\repos\\IsciTakipSistemi\\ITS.SERVİCE\\ITS.SERVİCE.csproj"

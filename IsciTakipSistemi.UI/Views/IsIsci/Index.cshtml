@@ -30,6 +30,7 @@
 								<label for="selectAll"></label>
 							</span>
 						</th>
+						<th>Yövmiye</th>
 						<th scope="col">İşçi Adı</th>
 						<th scope="col">İşçi Soyadı</th>
 						<th scope="col">İşçi Grubu</th>
@@ -63,11 +64,24 @@
 
 								<span class="custom-checkbox">
 
-									<input asp-for="@Model.Item4[j].Durumu" type="checkbox" class="checkbox1">
+									<input id="selectAll" asp-for="@Model.Item4[j].Durumu" type="checkbox" class="checkbox1">
 									<label for="checkbox1"></label>
 
 								</span>
 							</th>
+							<td>
+								<select   asp-for="@Model.Item4[j].Yövmiye"  class="se form-control pr-2 ">
+									<option selected >0</option>
+									<option>0,5</option>
+									<option >1</option>
+									<option>1,5</option>
+									<option>2</option>
+									<option>2,5</option>
+									<option>3</option>
+									<option>3,5</option>
+									<option>4</option>
+								</select>
+							</td>
 
 							<td>@i.IsciAdi</td>
 							<td> @i.IsciSoyadi  </td>

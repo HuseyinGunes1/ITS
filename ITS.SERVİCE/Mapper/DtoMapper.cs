@@ -18,6 +18,7 @@ namespace ITS.SERVİCE.Mapper
             CreateMap<CreateIsIsciDto, IsIsci>().ReverseMap();
             CreateMap<CreateGiderDto, Gider>().ReverseMap();
             CreateMap<CreateAileDto, Aile>().ReverseMap();
+            CreateMap<CreateUcretDto, Ücret>().ReverseMap();
 
         }
     }

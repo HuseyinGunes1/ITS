@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITS.DATA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210423205658_ntial")]
-    partial class ntial
+    [Migration("20210508104432_test4")]
+    partial class test4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,6 +87,9 @@ namespace ITS.DATA.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("GrupId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -121,6 +124,8 @@ namespace ITS.DATA.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GrupId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -227,6 +232,9 @@ namespace ITS.DATA.Migrations
                     b.Property<bool?>("Durumu")
                         .HasColumnType("bit");
 
+                    b.Property<double>("Yövmiye")
+                        .HasColumnType("float");
+
                     b.HasKey("IsciId", "IsId");
 
                     b.HasIndex("IsId");
@@ -305,6 +313,21 @@ namespace ITS.DATA.Migrations
                     b.HasKey("CavusId");
 
                     b.ToTable("KullaniciRefreshToken");
+                });
+
+            modelBuilder.Entity("ITS.CORE.Entites.Ücret", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("IsUcreti")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ucret");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -444,6 +467,15 @@ namespace ITS.DATA.Migrations
                         .WithMany("Aile")
                         .HasForeignKey("GrupId")
                         .HasConstraintName("FK_Aile_Grup1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ITS.CORE.Entites.Cavus", b =>
+                {
+                    b.HasOne("ITS.CORE.Entites.Grup", "Grup")
+                        .WithMany("Cavus")
+                        .HasForeignKey("GrupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

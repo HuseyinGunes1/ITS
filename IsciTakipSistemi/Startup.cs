@@ -44,6 +44,7 @@ namespace IsciTakipSistemi
         {
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUcretService, UcretService>();
             services.AddScoped<IIsciService, IsciService>();
             services.AddScoped<IAileService, AileService>();
             services.AddScoped<IGiderService, GiderService>();

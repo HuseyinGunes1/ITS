@@ -37,7 +37,7 @@ namespace ITS.DATA.Implementasyon
                      join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
                      join ka in _dbContext.Set<Isveren>() on a.IsverenId equals ka.IsverenId
                      where v.IsciId== id && v.Durumu == durumu
-                     orderby a.Tarih descending
+                     orderby a.Tarih ascending
 
                      select new CreateIsciBilgiDto
                      {
@@ -45,7 +45,9 @@ namespace ITS.DATA.Implementasyon
                         Tarih= a.Tarih,
                         Durumu= v.Durumu,
                         IsverenAdi= ka.IsverenAdi,
-                        IsverenSoyadi= ka.IsverenSoyadi
+                        IsverenSoyadi= ka.IsverenSoyadi,
+                        Yövmiye=v.Yövmiye
+                        
 
                      }).ToList();
 
@@ -57,7 +59,7 @@ namespace ITS.DATA.Implementasyon
                          
         }
 
-        public int GetAllToplamJoin(int id, bool durumu)
+        public double GetAllToplamJoin(int id, bool durumu)
         {
             IEnumerable<CreateIsciBilgiDto> p = (from a in _dbContext.Set<Is>()
                                                  join v in _dbContext.Set<IsIsci>() on a.IsId equals v.IsId
@@ -71,11 +73,12 @@ namespace ITS.DATA.Implementasyon
                                                      Tarih = a.Tarih,
                                                      Durumu = v.Durumu,
                                                      IsverenAdi = ka.IsverenAdi,
-                                                     IsverenSoyadi = ka.IsverenSoyadi
+                                                     IsverenSoyadi = ka.IsverenSoyadi,
+                                                     Yövmiye=v.Yövmiye
 
                                                  }).ToList();
 
-          int Toplam= p.Count();
+          double Toplam= p.Sum(x=>x.Yövmiye);
 
             return Toplam;
 

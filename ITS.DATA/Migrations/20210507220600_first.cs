@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ITS.DATA.Migrations
 {
-    public partial class ntial : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -34,31 +34,6 @@ namespace ITS.DATA.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AspNetUsers",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    UserName = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
-                    Email = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(nullable: false),
-                    PasswordHash = table.Column<string>(nullable: true),
-                    SecurityStamp = table.Column<string>(nullable: true),
-                    ConcurrencyStamp = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
-                    LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -102,6 +77,19 @@ namespace ITS.DATA.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Ucret",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IsUcreti = table.Column<decimal>(type: "decimal(5,3)", unicode: false, maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ucret", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -120,6 +108,114 @@ namespace ITS.DATA.Migrations
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Aile",
+                columns: table => new
+                {
+                    AileId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AileAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
+                    GrupId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Aile", x => x.AileId);
+                    table.ForeignKey(
+                        name: "FK_Aile_Grup1",
+                        column: x => x.GrupId,
+                        principalTable: "Grup",
+                        principalColumn: "GrupId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUsers",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
+                    Email = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(nullable: false),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    SecurityStamp = table.Column<string>(nullable: true),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    LockoutEnabled = table.Column<bool>(nullable: false),
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    GrupId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetUsers_Grup_GrupId",
+                        column: x => x.GrupId,
+                        principalTable: "Grup",
+                        principalColumn: "GrupId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Is",
+                columns: table => new
+                {
+                    IsId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IsAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
+                    Tarih = table.Column<DateTime>(type: "datetime", nullable: false),
+                    IsverenId = table.Column<int>(nullable: false),
+                    GrupId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Is", x => x.IsId);
+                    table.ForeignKey(
+                        name: "FK_Work_Grup",
+                        column: x => x.GrupId,
+                        principalTable: "Grup",
+                        principalColumn: "GrupId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Is_Isveren",
+                        column: x => x.IsverenId,
+                        principalTable: "Isveren",
+                        principalColumn: "IsverenId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Isci",
+                columns: table => new
+                {
+                    IsciId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IsciAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
+                    IsciSoyadi = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
+                    AileId = table.Column<int>(nullable: false),
+                    GrupId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Isci_1", x => x.IsciId);
+                    table.ForeignKey(
+                        name: "FK_Isci_Aile",
+                        column: x => x.AileId,
+                        principalTable: "Aile",
+                        principalColumn: "AileId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Isci_Grup",
+                        column: x => x.GrupId,
+                        principalTable: "Grup",
+                        principalColumn: "GrupId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,82 +304,6 @@ namespace ITS.DATA.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Aile",
-                columns: table => new
-                {
-                    AileId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AileAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
-                    GrupId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Aile", x => x.AileId);
-                    table.ForeignKey(
-                        name: "FK_Aile_Grup1",
-                        column: x => x.GrupId,
-                        principalTable: "Grup",
-                        principalColumn: "GrupId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Is",
-                columns: table => new
-                {
-                    IsId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IsAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
-                    Tarih = table.Column<DateTime>(type: "datetime", nullable: false),
-                    IsverenId = table.Column<int>(nullable: false),
-                    GrupId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Is", x => x.IsId);
-                    table.ForeignKey(
-                        name: "FK_Work_Grup",
-                        column: x => x.GrupId,
-                        principalTable: "Grup",
-                        principalColumn: "GrupId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Is_Isveren",
-                        column: x => x.IsverenId,
-                        principalTable: "Isveren",
-                        principalColumn: "IsverenId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Isci",
-                columns: table => new
-                {
-                    IsciId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IsciAdi = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
-                    IsciSoyadi = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
-                    AileId = table.Column<int>(nullable: false),
-                    GrupId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Isci_1", x => x.IsciId);
-                    table.ForeignKey(
-                        name: "FK_Isci_Aile",
-                        column: x => x.AileId,
-                        principalTable: "Aile",
-                        principalColumn: "AileId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Isci_Grup",
-                        column: x => x.GrupId,
-                        principalTable: "Grup",
-                        principalColumn: "GrupId",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Gider",
                 columns: table => new
                 {
@@ -312,7 +332,8 @@ namespace ITS.DATA.Migrations
                 {
                     IsciId = table.Column<int>(nullable: false),
                     IsId = table.Column<int>(nullable: false),
-                    Durumu = table.Column<bool>(nullable: true)
+                    Durumu = table.Column<bool>(nullable: true),
+                    Yövmiye = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -362,6 +383,11 @@ namespace ITS.DATA.Migrations
                 name: "IX_AspNetUserRoles_RoleId",
                 table: "AspNetUserRoles",
                 column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_GrupId",
+                table: "AspNetUsers",
+                column: "GrupId");
 
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
@@ -434,6 +460,9 @@ namespace ITS.DATA.Migrations
 
             migrationBuilder.DropTable(
                 name: "KullaniciRefreshToken");
+
+            migrationBuilder.DropTable(
+                name: "Ucret");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

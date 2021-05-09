@@ -23,7 +23,7 @@ namespace IsciTakipSistemi.Controllers.IsciController
 			_userService = userService;
 		}
 
-		[Authorize]
+		
 		[HttpPost]
 		public async Task<Isci> Add(CreateIsciDto dto)
 		{

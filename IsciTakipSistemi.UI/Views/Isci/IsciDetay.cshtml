@@ -4,23 +4,14 @@
 	Layout = "~/Views/Shared/View.cshtml";
 }
 <div class="row d-flex justify-content-center mt-2">
-	<div class="col-sm-3 p-2 m-2">
-		<div class="card bg-primary rounded ">
-			<div class="card-body">
-				<h5 class="card-title"></h5>
-				<h5 class="card-text text-white"><i class='bx bx-calendar ' style='color:#f7f4f4; font-size: 1.5rem;'></i>TOPLAM GÜN</h5><br>
-				<h4 class="card-text text-white"> @ViewBag.Total</h4>
-
-			</div>
-		</div>
-	</div>
+	
 
 	<div class="col-sm-3 p-2 m-2">
 		<div class="card bg-warning rounded ">
 			<div class="card-body">
 				<h5 class="card-title"></h5>
-				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i> TOPLAM ÜCRET</h5><br>
-				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Ucret</i></h4>
+				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i> TOPLAM YÖVMİYE</h5><br>
+				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Yövmiye</i></h4>
 
 			</div>
 		</div>
@@ -30,9 +21,20 @@
 		<div class="card bg-danger rounded ">
 			<div class="card-body">
 				<h5 class="card-title"></h5>
-				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i>TOPLAM GİDER</h5><br>
-				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Gider</i></h4>
+				<h5 class="card-text text-white"><i class='bx bx-money ' style='color:#f7f4f4; font-size: 1.5rem;'></i> ÜCRET</h5><br>
+				<h4 class="card-text text-white"> <i class='bx bx-lira ' style='color:#f7f4f4; font-size: 1.5rem;'> @ViewBag.Ucret</i></h4>
 
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 p-2 m-2">
+		<div class="card bg-primary rounded ">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<h5 class="card-text text-white"><i class='bx bx-calendar ' style='color:#f7f4f4; font-size: 1.5rem;'></i>TOPLAM ÜCRET</h5><br>
+				<h4 class="card-text text-white"> @ViewBag.Total</h4>
 
 			</div>
 		</div>
@@ -61,6 +63,7 @@
 
 					<th scope="col">İş Adı</th>
 					<th scope="col">Tarih</th>
+					<th scope="col">Yövmiye</th>
 					<th scope="col">İşveren Adı</th>
 					<th scope="col">İşveren Soyadı</th>
 
@@ -71,14 +74,16 @@
 				{
 
 
-					<tr>
+				<tr>
 
-						<td>@i.IsAdi</td>
-						<td>@i.Tarih</td>
-						<td>@i.IsverenAdi</td>
-						<td>@i.IsverenSoyadi</td>
+					<td>@i.IsAdi</td>
+					<td>@i.Tarih</td>
+					<td>@i.Yövmiye</td>
+					<td>@i.IsverenAdi</td>
+					<td>@i.IsverenSoyadi</td>
 
-					</tr>
+
+				</tr>
 				}
 			</tbody>
 		</table>

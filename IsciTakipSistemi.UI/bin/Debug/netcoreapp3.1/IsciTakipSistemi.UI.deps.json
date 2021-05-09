@@ -32,6 +32,7 @@
       "IsciTakipSistemi.UI/1.0.0": {
         "dependencies": {
           "ITS.CORE": "1.0.0",
+          "ITS.DATA": "1.0.0",
           "ITS.SERVİCE": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "Newtonsoft.Json": "13.0.1",

@@ -34,7 +34,7 @@ namespace ITS.SERVİCE.Service
 			return _IsciBilgigenericRepository.GetAllJoin(isciId, durumu);
 		}
 
-		public int ToplamGunAsync(int isciId, bool durumu)
+		public double ToplamGunAsync(int isciId, bool durumu)
 		{
 			return _IsciBilgigenericRepository.GetAllToplamJoin(isciId, durumu);
 			

@@ -16,7 +16,7 @@ namespace ITS.CORE.Repository
         Task<TEntity> GetAllByIdAsync(int id);
 
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
-        public int GetAllToplamJoin(int id, bool durumu);
+        public double GetAllToplamJoin(int id, bool durumu);
         public IEnumerable<CreateIsciBilgiDto> GetAllJoin(int id,bool durumu);
         
         TEntity Update(TEntity entity);

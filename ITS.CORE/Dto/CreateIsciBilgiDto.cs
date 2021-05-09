@@ -11,5 +11,6 @@ namespace ITS.CORE.Dto
 		public bool? Durumu { get; set; }
 		public string IsverenAdi { get; set; }
 		public string IsverenSoyadi { get; set; }
+		public double Yövmiye { get; set; }
 	}
 }

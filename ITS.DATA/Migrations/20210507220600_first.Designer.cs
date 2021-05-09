@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITS.DATA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210425185130_initial")]
-    partial class initial
+    [Migration("20210507220600_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -232,6 +232,9 @@ namespace ITS.DATA.Migrations
                     b.Property<bool?>("Durumu")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Yövmiye")
+                        .HasColumnType("int");
+
                     b.HasKey("IsciId", "IsId");
 
                     b.HasIndex("IsId");
@@ -310,6 +313,23 @@ namespace ITS.DATA.Migrations
                     b.HasKey("CavusId");
 
                     b.ToTable("KullaniciRefreshToken");
+                });
+
+            modelBuilder.Entity("ITS.CORE.Entites.Ücret", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("IsUcreti")
+                        .HasColumnType("decimal(5,3)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ucret");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

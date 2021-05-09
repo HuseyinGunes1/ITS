@@ -8,6 +8,6 @@ namespace ITS.CORE.Dto
 	{
 		public string IsAdi { get; set; }
 		public DateTime Tarih { get; set; }
-		public int Yövmiye { get; set; }
+		public double Yövmiye { get; set; }
 	}
 }

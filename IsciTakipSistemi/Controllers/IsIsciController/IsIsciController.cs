@@ -34,9 +34,9 @@ namespace IsciTakipSistemi.Controllers.IsIsciController
 		}
 
 		[HttpGet]
-		public int ToplamGunAll(int isciId, bool durumu)
+		public double ToplamGunAll(int isciId, bool durumu)
 		{
-			return _isisciService.ToplamGunAsync(isciId, durumu)*100;
+			return _isisciService.ToplamGunAsync(isciId, durumu);
 		}
 
 		[HttpGet]
