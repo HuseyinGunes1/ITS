@@ -1,0 +1,96 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Paneli</title>
+	<link rel="stylesheet" href="~/css/Admin.css">
+
+	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body id="body-pd">
+	<header class="header" id="header">
+		<div class="header-toggle">
+			<i class='bx bx-menu' id="header-toggle"></i>
+		</div>
+		<div class="header-img">
+			<span>Hüseyin Güneş</span>
+			<img src="matheus-ferrero-W7b3eDUb_2I-unsplash.jpg" alt="">
+		</div>
+	</header>
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav_brand">
+
+					<i  class='bx bx-menu nav_toggle' id="nav-toggle"></i>
+					<a asp-controller="Home" asp-action="Index" class="nav_logo">Admin Paneli</a>
+				</div>
+
+				<div class="nav_list">
+					<a asp-controller="Grup" asp-action="GrupEkle" class="nav_link">
+						<i class='bx bx-group nav_icon'></i>
+						<span class="nav_name">Grup Ekle</span>
+					</a>
+					<a asp-controller="Grup" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">Grup İşlemleri</span>
+					</a>
+					<a asp-controller="Aile" asp-action="AileEkle" class="nav_link">
+						<i class='bx bx-user-circle nav_icon '></i>
+						<span class="nav_name">Aile Ekle</span>
+					</a>
+					<a asp-controller="Aile" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">Aile İşlemleri</span>
+					</a>
+					<a asp-controller="Kullanici" asp-action="KullaniciEkle" class="nav_link">
+						<i class='bx bx-user-circle nav_icon '></i>
+						<span class="nav_name">Kullanıcı Ekle</span>
+					</a>
+					<a asp-controller="Kullanici" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">Kullanıcı İşlemleri</span>
+					</a>
+					<a asp-controller="Isci" asp-action="IsciEkle" class="nav_link">
+						<i class='bx bx-user-circle nav_icon '></i>
+						<span class="nav_name">İşçi Ekle</span>
+					</a>
+					<a asp-controller="Isci" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">İşçi İşlemleri </span>
+					</a>
+					<a asp-controller="Gider" asp-action="GiderEkle" class="nav_link">
+
+						<i class='bx bx-folder nav_icon'></i>
+						<span class="nav_name">Gider Ekle</span>
+					</a>
+					<a asp-controller="Gider" asp-action="Index" class="nav_link">
+						<i class='bx bx-sticker nav_icon'></i>
+						<span class="nav_name">Gider İşlemleri</span>
+					</a>
+
+				</div>
+			</div>
+			<a href="" class="nav_link">
+				<i class='bx bx-log-out nav_icon'></i>
+				<span class="nav_name">Log out</span>
+			</a>
+		</nav>
+
+
+	</div>
+	<div class="main">
+		@RenderBody()
+	</div>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/js/shared.js"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
+

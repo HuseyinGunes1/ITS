@@ -1,0 +1,42 @@
+﻿
+@{
+	ViewData["Title"] = "IsciEkle";
+	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
+}
+
+<form>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="inputEmail4">İşçi Adı</label>
+			<input type="text" class="form-control" placeholder="İşçi Adı Giriniz">
+		</div>
+		<div class="form-group col-md-6">
+			<label for="inputPassword4">İşçi Soyadı</label>
+			<input type="text" class="form-control" placeholder="İşçi Soyadı Giriniz">
+		</div>
+	</div>
+
+
+	<div class="form-row">
+
+		<div class="form-group col-md-6">
+			<label for="inputState">Aile Adı</label>
+			<select id="inputState" class="form-control">
+				<option selected>Hüseyin Güneş</option>
+				<option>Saliha Güneş</option>
+			</select>
+		</div>
+		<div class="form-group col-md-6">
+			<label for="inputState">Grup Adı</label>
+			<select id="inputState" class="form-control">
+				<option selected>Hüseyin Güneş</option>
+				<option>Saliha Güneş</option>
+			</select>
+		</div>
+
+	</div>
+
+	<button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+

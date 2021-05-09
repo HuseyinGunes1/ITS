@@ -55,6 +55,15 @@ namespace IsciTakipSistemi.UI
 
 			app.UseEndpoints(endpoints =>
 			{
+			//Area Route
+			endpoints.MapControllerRoute(
+
+			       name: "areaDefault",
+					pattern: "{area}/{Controller=Home}/{Action=Index}/{id?}");
+		
+
+					
+					
 				endpoints.MapControllerRoute(
 					name: "default",
 					pattern: "{controller=Home}/{action=Index}/{id?}");

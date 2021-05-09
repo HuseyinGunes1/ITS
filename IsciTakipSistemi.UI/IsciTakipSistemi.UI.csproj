@@ -15,4 +15,10 @@
     <ProjectReference Include="..\ITS.SERVİCE\ITS.SERVİCE.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\AdminPaneli\Data\" />
+    <Folder Include="Areas\AdminPaneli\Models\" />
+    <Folder Include="Areas\AdminPaneli\Views\Admin\" />
+  </ItemGroup>
+
 </Project>

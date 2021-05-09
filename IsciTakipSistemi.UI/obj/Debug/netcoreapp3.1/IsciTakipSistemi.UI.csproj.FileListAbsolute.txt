@@ -171,3 +171,15 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\ne
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Gider\GiderDetay.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Isveren\Index.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Isveren\IsverenDetay.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Shared\Admin.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Home\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Grup\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Aile\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Kullanici\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Isci\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Gider\Index.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Aile\AileEkle.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Gider\GiderEkle.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Grup\GrupEkle.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Isci\IsciEkle.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Kullanici\KullaniciEkle.cshtml.g.cs

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "AileEkle";
+    Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
+}
+<div class="d-flex justify-content-center mt-5">
+	<form>
+
+		
+		<div class="form-group mx-sm-3 mb-2">
+			<label for="inputState">Aile Adı </label>
+			<input id="inputState" type="text" placeholder="Aile Adını Giriniz">
+		</div>
+		<div class="form-group mx-sm-3 mb-2">
+			<label for="inputState">Grup Adı: </label>
+			<select id="inputState" class="form-control">
+				<option selected>1.Grup</option>
+				<option>2.Grup</option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-primary mb-2 ml-2">Aile Ekle</button>
+
+	</form>
+</div>
