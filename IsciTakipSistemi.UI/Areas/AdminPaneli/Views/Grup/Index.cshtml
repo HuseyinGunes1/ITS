@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<ITS.CORE.Dto.CreateGrupDto>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
 	ViewData["Title"] = "Index";
 	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
@@ -23,27 +24,29 @@
 					<th scope="col">Grup No</th>
 					<th scope="col">Grup Adı</th>
 					<th scope="col">Düzenle</th>
-					<th scope="col">Sil</th>
 					
+
 
 				</tr>
 			</thead>
 			<tbody>
-				@*@foreach (var i in Model)
-				{*@
+				@{int a = 1; }
+				@foreach (var i in Model)
+				{
 
 
 					<tr>
 
-						<td>1</td>
-						<td>1.Grup</td>
-						<td><a href=""><i class='bx bxs-pencil' style='color:rgba(15,223,88,0.92); font-size:1.7rem'></i></a></td>
-						<td><a href=""><i class='bx bx-x' style='color:#ef0404; font-size:1.9rem'></i></a></td>
-						
+						<td>@a</td>
+						<td>@i.GrupAdi</td>
+						<td><a asp-controller="Grup" asp-action="GrupUpdate" asp-route-grupid="@i.GrupId"><i class='bx bxs-pencil' style='color:rgba(15,223,88,0.92); font-size:1.7rem'></i></a></td>
+						@*<td><a  asp-controller="Grup" asp-action="GrupSil" asp-route-grupid="@i.GrupId"><i class='bx bx-x' style='color:#ef0404; font-size:1.9rem'></i></a></td>*@
+
 
 
 					</tr>
-				@*}*@
+					a++;
+				}
 			</tbody>
 		</table>
 	</div>

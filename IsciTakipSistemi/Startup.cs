@@ -47,6 +47,7 @@ namespace IsciTakipSistemi
             services.AddScoped<IUcretService, UcretService>();
             services.AddScoped<IIsciService, IsciService>();
             services.AddScoped<IAileService, AileService>();
+            services.AddScoped<IGrupService, GrupService>();
             services.AddScoped<IGiderService, GiderService>();
             services.AddScoped<IIsIsciService, IsIsciService>();
             services.AddScoped(typeof(ISumService<>), typeof(SumService<>));

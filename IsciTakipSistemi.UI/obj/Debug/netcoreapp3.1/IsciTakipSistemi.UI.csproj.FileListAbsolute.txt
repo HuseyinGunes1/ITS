@@ -183,3 +183,5 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\ne
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Grup\GrupEkle.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Isci\IsciEkle.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Kullanici\KullaniciEkle.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Grup\GrupUpdate.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Aile\AileUpdate.cshtml.g.cs

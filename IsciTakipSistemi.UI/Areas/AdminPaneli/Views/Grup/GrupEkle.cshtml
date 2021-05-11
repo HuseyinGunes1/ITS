@@ -1,15 +1,17 @@
-﻿
+﻿@model ITS.CORE.Dto.CreateGrupDto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "GrupEkle";
-    Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
+	ViewData["Title"] = "GrupEkle";
+	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
 }
 
-<form class="form-inline">
-	<div class="form-group mb-2">
-		<label>Grup Adı </label>
-		<input type="text" placeholder="Grup Adını Giriniz">
-	</div>
-	
-	<button type="submit" class="btn btn-primary mb-2">Aile Ekle</button>
-</form>
+<div class="d-flex justify-content-center mt-5">
+	<form asp-controller="Grup" asp-action="GrupEkle">
+		<div class="form-group mx-sm-3 mb-2">
+			<label for="inputState">Grup Adı: </label>
+			<input id="inputState" type="text" asp-for="@Model.GrupAdi" class="form-control" placeholder="Grup Adını Giriniz">
+		</div>
+		<button type="submit" class="btn btn-primary">Grup Ekle</button>
+	</form>
+</div>
 

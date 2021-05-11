@@ -1,0 +1,17 @@
+﻿@model ITS.CORE.Dto.CreateGrupDto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	ViewData["Title"] = "GrupUpdate";
+	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
+}
+
+<div class="d-flex justify-content-center mt-5">
+	<form asp-controller="Grup" asp-action="GrupUpdate">
+		<div class="form-group mx-sm-3 mb-2">
+			<label for="inputState">Grup Adı: </label>
+			<input id="inputState" type="text" asp-for="@Model.GrupAdi" class="form-control" value="@Model.GrupAdi" placeholder="Grup Adını Giriniz">
+		</div>
+		<input id="inputState" type="hidden" asp-for="@Model.GrupId" class="form-control"  placeholder="Grup Adını Giriniz">
+		<button type="submit" class="btn btn-primary">Güncelle</button>
+	</form>
+</div>

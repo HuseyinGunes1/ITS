@@ -74,14 +74,25 @@ namespace ITS.SERVİCE.Service
 			return Response<TDto>.Basarili(ObjectMapper.MapperIslemleri.Map<TDto>(Product), 200);
 		}
 
+		public async Task<T> GetIdAsync2(int id)
+		{
+			var Product = await _genericRepository.GetAllByIdAsync(id);
+			if (Product == null)
+			{
+				return Product;
+			}
+			return Product;
+		}
+
 		public async Task<Response<NoDataDto>> Remove(int id)
 		{
 			var IsExistEntity = await _genericRepository.GetAllByIdAsync(id);
-			if (IsExistEntity == null)
+			var NewEntity = ObjectMapper.MapperIslemleri.Map<T>(IsExistEntity);
+			if (NewEntity == null)
 			{
 				return Response<NoDataDto>.Basarisiz("Belirtilen Ürün Bulunamadı", 404);
 			}
-			_genericRepository.Remove(IsExistEntity);
+			_genericRepository.Remove(NewEntity);
 			await _unitOfWork.CommitAsync();
 			return Response<NoDataDto>.Basarili(204);
 		}

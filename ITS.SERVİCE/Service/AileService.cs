@@ -21,5 +21,18 @@ namespace ITS.SERVİCE.Service
 		{
 			return await _serviceGeneric.AddAsync(aile);
 		}
+		public async Task<IEnumerable<Aile>> GetAllAileAsync()
+		{
+			return await _serviceGeneric.GetAllAsync2();
+		}
+		public async Task<Aile> GetAllAileid(int aileid)
+		{
+			return await _serviceGeneric.GetIdAsync2(aileid);
+		}
+		public async Task<Response<NoDataDto>> Update(CreateAileDto aile, int aileid)
+		{
+			return await _serviceGeneric.Update(aile, aileid);
+		}
+
 	}
 }

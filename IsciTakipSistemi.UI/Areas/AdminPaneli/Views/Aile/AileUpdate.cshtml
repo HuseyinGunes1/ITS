@@ -1,22 +1,23 @@
 ﻿@model (ITS.CORE.Dto.CreateAileDto, IEnumerable<ITS.CORE.Dto.CreateGrupDto>)
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-	ViewData["Title"] = "AileEkle";
+	ViewData["Title"] = "AileUpdate";
 	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
 }
+
 <div class="d-flex justify-content-center mt-5">
-	<form asp-controller="Aile" asp-action="AileEkle">
+	<form asp-controller="Aile" asp-action="AileUpdate">
 		<div class="form-group mx-sm-3 mb-2">
 			<label for="inputState">Aile Adı: </label>
-			<input id="inputState" type="text" asp-for="@Model.Item1.AileAdi" class="form-control" placeholder="Aile Adını Giriniz">
+			<input id="inputState" type="text" asp-for="@Model.Item1.AileAdi" value="@Model.Item1.AileAdi" class="form-control" placeholder="Aile Adını Giriniz">
 		</div>
 		<div class="form-group mx-sm-3 mb-2">
 			<label for="inputState">Grup Adı: </label>
 			<select id="inputState" asp-for="@Model.Item1.GrupId" asp-items="@(new SelectList(Model.Item2, "GrupId","GrupAdi"))" class="form-control">
-				@*<option selected>1.Grup</option>
-				<option>2.Grup</option>*@
 			</select>
 		</div>
-		<button type="submit" class="btn btn-primary mb-2 ml-2">Aile Ekle</button>
+		<input  type="hidden" asp-for="@Model.Item1.AileId" >
+		<button type="submit" class="btn btn-primary mb-2 ">Aile Güncelle</button>
 	</form>
 </div>
+

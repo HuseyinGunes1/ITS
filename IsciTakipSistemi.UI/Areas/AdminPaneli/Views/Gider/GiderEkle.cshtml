@@ -3,35 +3,35 @@
     ViewData["Title"] = "GiderEkle";
     Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
 }
+<div class="d-flex justify-content-center mt-5 ml-3">
+	<form>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="inputEmail4">Gider Kişi</label>
+				<input type="text" class="form-control" placeholder="Gider Kişi">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="inputPassword4">Gider Açıklama</label>
+				<input type="text" class="form-control" placeholder="Gider Açıklama">
+			</div>
+		</div>
 
-<form>
-	<div class="form-row">
-		<div class="form-group col-md-6">
-			<label for="inputEmail4">Gider Kişi</label>
-			<input type="text" class="form-control"  placeholder="Gider Kişi">
-		</div>
-		<div class="form-group col-md-6">
-			<label for="inputPassword4">Gider Açıklama</label>
-			<input type="text" class="form-control"  placeholder="Gider Açıklama">
-		</div>
-	</div>
-	
-	
-	<div class="form-row">
-		<div class="form-group col-md-6">
-			<label for="inputCity">Gider Tutar</label>
-			<input type="number" class="form-control" placeholder="Gider Tutar" >
-		</div>
-		<div class="form-group col-md-6">
-			<label for="inputState">İşçi</label>
-			<select id="inputState" class="form-control">
-				<option selected>Hüseyin Güneş</option>
-				<option>Saliha Güneş</option>
-			</select>
-		</div>
-		
-	</div>
-	
-	<button type="submit" class="btn btn-primary">Sign in</button>
-</form>
 
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="inputCity">Gider Tutar</label>
+				<input type="number" class="form-control" placeholder="Gider Tutar">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="inputState">İşçi</label>
+				<select id="inputState" class="form-control">
+					<option selected>Hüseyin Güneş</option>
+					<option>Saliha Güneş</option>
+				</select>
+			</div>
+
+		</div>
+
+		<button type="submit" class="btn btn-primary">Gider Ekle</button>
+	</form>
+	</div>

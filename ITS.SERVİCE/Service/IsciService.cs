@@ -1,4 +1,6 @@
-﻿using ITS.CORE.Dto;
+﻿
+
+using ITS.CORE.Dto;
 using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using ITS.Shared;
@@ -22,7 +24,6 @@ namespace ITS.SERVİCE.Service
 			return await _serviceGeneric.AddAsync(Isci);
 			
 		}
-
 		public async Task<IEnumerable<CreateIsciDto>> GetIsciAsync(int grupId)
 		{
 			return await _serviceGeneric.GetAllAsync();
