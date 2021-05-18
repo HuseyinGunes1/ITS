@@ -2,6 +2,7 @@
 using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using ITS.Shared;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace IsciTakipSistemi.Controllers.AileController
 			return await _aileService.AddIsAsync(dto);
 		}
 		[HttpGet]
+		[Authorize]
 		public async Task<IEnumerable<Aile>> Get()
 		{
 			return await _aileService.GetAllAileAsync();

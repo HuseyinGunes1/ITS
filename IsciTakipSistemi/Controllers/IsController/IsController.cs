@@ -2,6 +2,7 @@
 using ITS.CORE.Entites;
 using ITS.CORE.Services;
 using ITS.Shared;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace IsciTakipSistemi.Controllers.IsController
 
 		}
 		[HttpPost]
+		
 		public async Task<Is> EkleIs(CreateIsDto Is)
 		{
 			return await _isService.AddIsAsync(Is);

@@ -110,6 +110,19 @@ namespace ITS.SERVİCE.Service
 			return Response<NoDataDto>.Basarili(204);//gövde olmadığından 204 döner
 		}
 
+		public async Task<Response<NoDataDto>> UpdateKullanici(TDto entity, string id)
+		{
+			var IsExistEntity = await _genericRepository.GetAllById(id);
+			if (IsExistEntity == null)
+			{
+				return Response<NoDataDto>.Basarisiz("Ürün Bulunamadı", 400);
+			}
+			var Entity = ObjectMapper.MapperIslemleri.Map<T>(entity);
+			_genericRepository.Update(Entity);
+			await _unitOfWork.CommitAsync();
+			return Response<NoDataDto>.Basarili(204);//gövde olmadığından 204 döner
+		}
+
 		public  IEnumerable<T> Where(Expression<Func<T, bool>> predicate)
 		{
 			//where(x=>x.id) //x func taki entity id ise bool değeri

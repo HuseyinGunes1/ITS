@@ -18,6 +18,7 @@ namespace IsciTakipSistemi.UI.Controllers
 		{
 			_apiServices = apiServices;
 		}
+		
 		public async Task<IActionResult> IndexAsync()
 		{
 			IEnumerable<CreateIsciDto> createIsciDtos;

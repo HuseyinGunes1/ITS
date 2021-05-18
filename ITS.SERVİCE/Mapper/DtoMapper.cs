@@ -12,6 +12,7 @@ namespace ITS.SERVİCE.Mapper
         public DtoMapper()
         {
             CreateMap<CavusDto, Cavus>().ReverseMap();
+            CreateMap<CreateUserDto, Cavus>().ReverseMap();
             CreateMap<CreateIsciDto, Isci>().ReverseMap();
             CreateMap<CreateIsverenDto, Isveren>().ReverseMap();
             CreateMap<CreateIsDto, Is>().ReverseMap();

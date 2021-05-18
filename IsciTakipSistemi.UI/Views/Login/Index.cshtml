@@ -1,4 +1,4 @@
-﻿
+﻿@model ITS.CORE.Dto.LoginDto
 @{
 	Layout = null;
 }
@@ -24,7 +24,7 @@
 		<div class="form">
 			<img src="~/img/undraw_mobile_login_ikmv.svg" class="form_img">
 
-			<form action="" class="form-content">
+			<form class="form-content" asp-controller="Login" asp-action="Index">
 				<h1 class="form-tittle">İşçi Takip Sistemi</h1>
 				<div class="form_div form_div_one">
 					<div class="form-icon">
@@ -33,7 +33,7 @@
 
 					<div class="form_div_input">
 						<label for="" class="label_form">Kullanıcı Adı</label>
-						<input type="text" class="form_input">
+						<input type="text" asp-for="@Model.Email" class="form_input">
 					</div>
 				</div>
 
@@ -46,7 +46,7 @@
 
 					<div class="form_div_input">
 						<label for="" class="label_form">Parola</label>
-						<input type="password" class="form_input">
+						<input type="password" asp-for="@Model.Password" class="form_input">
 					</div>
 				</div>
 				<input type="submit" class="form-button" value="Giriş Yap">
@@ -55,4 +55,5 @@
 	</div>
 </body>
 </html>
+
 

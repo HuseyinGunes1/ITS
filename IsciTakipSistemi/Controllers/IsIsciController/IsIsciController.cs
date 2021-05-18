@@ -1,6 +1,7 @@
 ﻿using ITS.CORE.Dto;
 using ITS.CORE.Entites;
 using ITS.CORE.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace IsciTakipSistemi.Controllers.IsIsciController
 		}
 
 		[HttpPost]
+		
 		public async Task<IEnumerable<CreateIsIsciDto>> EkleIsIsci(IEnumerable<CreateIsIsciDto> isisci)
 		{
 			return await _isisciService.AddIsIsciAsync(isisci);

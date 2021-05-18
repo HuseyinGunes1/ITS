@@ -31,12 +31,12 @@ namespace IsciTakipSistemi.Controllers.IsciController
 		}
 
 		
-		[HttpGet]
-		public async Task<IEnumerable<CreateIsciDto>> Get()
-		{
-			var user = await _userService.GetUserByNameAsync("usame.215487");
-			return await _ısciService.GetIsciAsync(user.data.GrupId);
-		}
+		//[HttpGet]
+		//public async Task<IEnumerable<CreateIsciDto>> Get()
+		//{
+		//	var user = await _userService.GetUserByNameAsync("usame.215487");
+		//	return await _ısciService.GetIsciAsync(user.data.GrupId);
+		//}
 
 	}
 }

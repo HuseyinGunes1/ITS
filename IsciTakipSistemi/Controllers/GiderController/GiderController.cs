@@ -23,7 +23,7 @@ namespace IsciTakipSistemi.Controllers.GiderController
 
 		}
 		[HttpPost]
-		public async Task<Gider> Addis(CreateGiderDto gider)
+		public async Task<Gider> AddGider(CreateGiderDto gider)
 		{
 			return await _giderService.AddIsAsync(gider);
 		}

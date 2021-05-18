@@ -1,6 +1,7 @@
 ﻿using ITS.CORE.Dto;
 using ITS.CORE.Entites;
 using ITS.CORE.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace IsciTakipSistemi.Controllers.IsverenController
 
 		
 		[HttpPost]
+		[Authorize]
 		public async Task<Isveren> Add(CreateIsverenDto dto)
 		{
 			return await _ısverenService.CreateIsverenAsync(dto);

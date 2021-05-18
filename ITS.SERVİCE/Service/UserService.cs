@@ -16,10 +16,12 @@ namespace ITS.SERVİCE.Service
 	public class UserService : IUserService
 	{
 		private readonly UserManager<Cavus> _kullanici;
+		
 
 		public UserService(UserManager<Cavus> userManager, IUnitOfWork unitOfWork)
 		{
 			_kullanici = userManager;
+			
 
 		}
 		public async Task<Response<CavusDto>> CreateUserAsync(CreateUserDto createUserDto)
@@ -35,10 +37,10 @@ namespace ITS.SERVİCE.Service
 
 			return Response<CavusDto>.Basarili(ObjectMapper.MapperIslemleri.Map<CavusDto>(user), 200);
 		}
-
 		public async Task<Response<CavusDto>> GetUserByNameAsync(string userName)
 		{
 			var user = await _kullanici.FindByNameAsync(userName);
+			
 			if (user == null)
 			{
 				return Response<CavusDto>.Basarisiz("user name not found", 404);
@@ -46,5 +48,15 @@ namespace ITS.SERVİCE.Service
 			}
 			return Response<CavusDto>.Basarili(ObjectMapper.MapperIslemleri.Map<CavusDto>(user), 200);
 		}
+
+		//public async Task<IEnumerable< CavusDto>> GetUser()
+		//{
+		//	return await _Kullanici2.GetAllAsync();
+		//}
+
+		//public async Task<Response<NoDataDto>> Update(CavusDto dto,string id)
+		//{
+		//	return await _Kullanici2.UpdateKullanici(dto, id);
+		//}
 	}
 }

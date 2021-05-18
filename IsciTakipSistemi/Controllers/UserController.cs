@@ -11,7 +11,7 @@ namespace IsciTakipSistemi.Controllers
 {
 
 	[ApiController]
-	[Route("api/[controller]")]
+	[Route("api/[controller]/[action]")]
 	public class UserController :CustomBaseController
 	{
 		private readonly IUserService _userService;
@@ -20,7 +20,7 @@ namespace IsciTakipSistemi.Controllers
 			_userService = userService;
 		}
 		[HttpPost]
-		public async Task<IActionResult> CreateUser(CreateUserDto createUserDto)
+		public async Task<IActionResult> Add(CreateUserDto createUserDto)
 		{
 			return ActionInstance(await _userService.CreateUserAsync(createUserDto));
 		}

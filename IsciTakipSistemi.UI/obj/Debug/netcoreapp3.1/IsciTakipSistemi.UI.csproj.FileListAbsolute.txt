@@ -108,7 +108,6 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\bin\Debug\ne
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\View.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\IsIsci\Index.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -185,3 +184,4 @@ C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\ne
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Kullanici\KullaniciEkle.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Grup\GrupUpdate.cshtml.g.cs
 C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPaneli\Views\Aile\AileUpdate.cshtml.g.cs
+C:\Users\hüseyin\source\repos\IsciTakipSistemi\IsciTakipSistemi.UI\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs

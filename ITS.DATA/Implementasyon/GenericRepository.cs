@@ -96,6 +96,15 @@ namespace ITS.DATA.Implementasyon
             }
             return entity;
         }
+        public async Task<TEntity> GetAllById(string id)
+        {
+            var entity = await _dbset.FindAsync(id);
+            if (entity != null)
+            {
+                _dbContext.Entry(entity).State = EntityState.Detached;
+            }
+            return entity;
+        }
 
         public void Remove(TEntity entity)
         {

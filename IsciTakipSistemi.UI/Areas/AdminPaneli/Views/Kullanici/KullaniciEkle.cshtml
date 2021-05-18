@@ -1,30 +1,33 @@
-﻿
+﻿@model (ITS.CORE.Dto.CreateUserDto, IEnumerable<ITS.CORE.Dto.CreateGrupDto>)
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "KullaniciEkle";
-    Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
+	ViewData["Title"] = "KullaniciEkle";
+	Layout = "~/Areas/AdminPaneli/Views/Shared/Admin.cshtml";
 }
 <div class="d-flex justify-content-center mt-5 ml-3">
-	<form>
+	<form asp-controller="Kullanici" asp-action="KullaniciEkle">
 		<div class="form-group">
 			<label for="exampleInputEmail1">Kullanıcı Adı</label>
-			<input type="email" class="form-control" placeholder="Kullanıcı Adı Giriniz">
+			<input required asp-for="@Model.Item1.UserName" class="form-control" placeholder="Kullanıcı Adı Giriniz">
 
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Email adresi</label>
-			<input type="email" class="form-control" " placeholder="Email Adresi Giriniz">
+			<input required type="email" class="form-control" asp-for="@Model.Item1.Email"  placeholder="Email Adresi Giriniz">
 
 		</div>
 		<div class="form-group">
 			<label for="exampleInputPassword1">Parola</label>
-			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Parola Giriniz">
+			<input required type="password" class="form-control" id="exampleInputPassword1" asp-for="@Model.Item1.Password" placeholder="Parola Giriniz">
 		</div>
-		<label for="inputState">Grup Adı</label>
-		<select id="inputState" class="form-control">
-			<option selected>Hüseyin Güneş</option>
-			<option>Saliha Güneş</option>
-		</select>
+		<div class="form-group mx-sm-3 mb-2">
+			<label for="inputState">Grup Adı: </label>
+			<select  id="inputState" asp-for="@Model.Item1.GrupId" asp-items="@(new SelectList(Model.Item2, "GrupId","GrupAdi"))" class="form-control">
+				@*<option selected>1.Grup</option>
+			<option>2.Grup</option>*@
+			</select>
+		</div>
 		<button type="submit" class="btn btn-primary mt-2">Kullanıcı Ekle</button>
 	</form>
-	</div>
+</div>
 

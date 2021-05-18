@@ -31,6 +31,10 @@ namespace IsciTakipSistemi.UI
 				opt.BaseAddress = new Uri(Configuration["baseUrl"]);
 			
 			});
+			services.AddSession(opt =>
+			{
+				opt.IdleTimeout = TimeSpan.FromMinutes(20);
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,11 +52,12 @@ namespace IsciTakipSistemi.UI
 			}
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
-
+			
 			app.UseRouting();
-
+			app.UseSession();
+			app.UseAuthentication();
 			app.UseAuthorization();
-
+			
 			app.UseEndpoints(endpoints =>
 			{
 			//Area Route

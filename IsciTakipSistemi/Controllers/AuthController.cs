@@ -1,5 +1,6 @@
 ﻿using ITS.CORE.Dto;
 using ITS.CORE.Services;
+using ITS.Shared;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,10 +21,10 @@ namespace IsciTakipSistemi.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> CreateToken(LoginDto loginDto)
+		public async Task<TokenDto> CreateToken(LoginDto loginDto)
 		{
 			var result = await _authenticationService.CreateAccesTokenAsync(loginDto);
-			return ActionInstance(result);
+			return result;
 		}
 	}
 }

@@ -30,16 +30,16 @@ namespace ITS.SERVİCE.Service
 			refreshToken = _RefreshToken;
 		}
 
-		public async Task<Response<TokenDto>> CreateAccesTokenAsync(LoginDto loginDto)
+		public async Task<TokenDto> CreateAccesTokenAsync(LoginDto loginDto)
 		{
 			if (loginDto == null) throw new ArgumentNullException(nameof(loginDto));//gelen kullanıcı null ise hata fırlat
 			var user = await userManager.FindByEmailAsync(loginDto.Email);//email adresine ait kullanıcı varsa user değişkenine kaydet
-			if (user == null) return Response<TokenDto>.Basarisiz("Email veya parola yanlış", 404);//eğer e posta ya ait kullanıcı yoksa hata ver
+			//if (user == null) return Response<TokenDto>.Basarisiz("Email veya parola yanlış", 404);//eğer e posta ya ait kullanıcı yoksa hata ver
 		
 
 			if (!await userManager.CheckPasswordAsync(user, loginDto.Password))
 			{
-				return Response<TokenDto>.Basarisiz("Email veya parola yanlış", 404);
+				//return Response<TokenDto>.Basarisiz("Email veya parola yanlış", 404);
 			}
 
 			var token = tokenService.CreateToken(user);
@@ -56,7 +56,7 @@ namespace ITS.SERVİCE.Service
 
 			}
 			await unitOfWork.CommitAsync();
-			return Response<TokenDto>.Basarili(token, 200);
+			return token;
 		}
 
 		public async Task<Response<TokenDto>> CreateByRefreshTokenAsync(string rrefreshToken)

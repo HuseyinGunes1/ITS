@@ -14,7 +14,7 @@ namespace ITS.CORE.Repository
         void Remove(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> GetAllByIdAsync(int id);
-
+        Task<TEntity> GetAllById(string id);
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
         public double GetAllToplamJoin(int id, bool durumu);
         public IEnumerable<CreateIsciBilgiDto> GetAllJoin(int id,bool durumu);
